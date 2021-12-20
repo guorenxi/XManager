@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 $XManager['Clash_Profiles'] = [
     'clash_new' => [
         'Checks' => [],
@@ -46,6 +44,9 @@ $XManager['Clash_Profiles'] = [
                 'content' => [
                     'regex' => '(.*)',
                     'right-proxies' => [
+					    'URL-Test',
+						'Fallback',
+						'Load-Balance',
                         '🚀Direct'
                     ],
                 ]
@@ -113,6 +114,33 @@ $XManager['Clash_Profiles'] = [
                 ]
             ],
             [
+                'name' => 'URL-Test',
+                'type' => 'url-test',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+			[
+                'name' => 'Fallback',
+                'type' => 'fallback',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+			[
+                'name' => 'Load-Balance',
+                'type' => 'load-balance',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+            [
                 'name' => '🚀Direct',
                 'type' => 'select',
                 'content' => [
@@ -123,7 +151,7 @@ $XManager['Clash_Profiles'] = [
             ]
         ],
         'rules' => [
-            'source' => 'clash.tpl'
+            'source' => 'clash_rule_1.tpl'
         ]
     ],
     'clash_old' => [
@@ -165,6 +193,9 @@ $XManager['Clash_Profiles'] = [
                 'content' => [
                     'regex' => '(.*)',
                     'right-proxies' => [
+					    'URL-Test',
+						'Fallback',
+						'Load-Balance',
                         '🚀Direct'
                     ],
                 ]
@@ -232,6 +263,33 @@ $XManager['Clash_Profiles'] = [
                 ]
             ],
             [
+                'name' => 'URL-Test',
+                'type' => 'url-test',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+			[
+                'name' => 'Fallback',
+                'type' => 'fallback',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+			[
+                'name' => 'Load-Balance',
+                'type' => 'load-balance',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+            [
                 'name' => '🚀Direct',
                 'type' => 'select',
                 'content' => [
@@ -242,7 +300,323 @@ $XManager['Clash_Profiles'] = [
             ]
         ],
         'Rule' => [
-            'source' => 'clash.tpl'
+            'source' => 'clash_rule_1.tpl'
+        ]
+    ],
+    'clash_old_2' => [
+        'Checks' => [],
+        'General' => [
+            'port'                => 7890,
+            'socks-port'          => 7891,
+            'redir-port'          => 7892,
+            'allow-lan'           => false,
+            'mode'                => 'Rule',
+            'log-level'           => 'info'
+        ],
+        'DNS' => [
+            'enable'              => true,
+            'ipv6'                => false,
+            'listen'              => '0.0.0.0:53',
+            'enhanced-mode'       => 'fake-ip',
+            'fake-ip-range'       => '198.18.0.1/16',
+            'nameserver'=>[
+                '119.29.29.29',
+                '1.1.1.1'
+            ],
+            'fallback'=>[
+                '1.0.0.1',
+                '8.8.8.8'
+            ],
+            'fallback-filter'=>[
+                'geoip'=> true,
+                'ipcidr'=>[
+                    '240.0.0.0/4'
+                ]
+            ]
+        ],
+        'Proxy' => [],
+        'ProxyGroup' => [
+			[
+                'name' => '🔰国外流量',
+                'type' => 'select',
+                'content' => [
+                    'regex' => '(.*)',
+                    'right-proxies' => [
+					    'URL-Test',
+						'Fallback',
+						'Load-Balance',
+                        '🚀直接连接'
+                    ],
+                ]
+            ],		
+            [
+                'name' => '⚓️其他流量',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🔰国外流量',
+                        '🚀直接连接'
+                    ]
+                ]
+            ],
+            [
+                'name' => '✈️Telegram',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🔰国外流量'
+                    ],
+                    'regex' => '(.*)',
+                ]
+            ],
+            [
+                'name' => '🎬Youtube',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🔰国外流量'
+                    ],
+                    'regex' => '(.*)',
+                ]
+            ],
+            [
+                'name' => '🎬Netflix',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🔰国外流量'
+                    ],
+                    'regex' => '(.*)',
+                ]
+            ],
+            [
+                'name' => '🎬哔哩哔哩',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🚀直接连接'
+                    ],
+                    'regex' => '(.*)',
+                ]
+            ],
+            [
+                'name' => '🎬国外媒体',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🔰国外流量'
+                    ],
+                    'regex' => '(.*)',
+                ]
+            ],
+            [
+                'name' => '🍎苹果服务',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🚀直接连接',
+                        '🔰国外流量'
+                    ]
+                ]
+            ],
+            [
+                'name' => 'URL-Test',
+                'type' => 'url-test',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+			[
+                'name' => 'Fallback',
+                'type' => 'fallback',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+			[
+                'name' => 'Load-Balance',
+                'type' => 'load-balance',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+            [
+                'name' => '🚀直接连接',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        'DIRECT'
+                    ]
+                ]
+            ]
+        ],
+        'Rule' => [
+            'source' => 'clash_rule_2.tpl'
+        ]
+    ],
+    'clash_new_2' => [
+        'Checks' => [],
+        'General' => [
+            'port'                => 7890,
+            'socks-port'          => 7891,
+            'redir-port'          => 7892,
+            'allow-lan'           => false,
+            'mode'                => 'rule',
+            'log-level'           => 'info',
+            'external-controller' => '0.0.0.0:9090',
+            'secret'              => '123456'
+        ],
+        'DNS' => [
+            'enable'              => true,
+            'ipv6'                => false,
+            'listen'              => '0.0.0.0:53',
+            'enhanced-mode'       => 'fake-ip',
+            'fake-ip-range'       => '198.18.0.1/16',
+            'nameserver'=>[
+                '119.29.29.29',
+                '1.1.1.1'
+            ],
+            'fallback'=>[
+                '1.0.0.1',
+                '8.8.8.8'
+            ],
+            'fallback-filter'=>[
+                'geoip'=> true,
+                'ipcidr'=>[
+                    '240.0.0.0/4'
+                ]
+            ]
+        ],
+        'proxies' => [],
+        'proxy-groups' => [
+			[
+                'name' => '🔰国外流量',
+                'type' => 'select',
+                'content' => [
+                    'regex' => '(.*)',
+                    'right-proxies' => [
+					    'URL-Test',
+						'Fallback',
+						'Load-Balance',
+                        '🚀直接连接'
+                    ],
+                ]
+            ],
+            [
+                'name' => '⚓️其他流量',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🔰国外流量',
+                        '🚀直接连接'
+                    ]
+                ]
+            ],
+            [
+                'name' => '✈️Telegram',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🔰国外流量'
+                    ],
+                    'regex' => '(.*)',
+                ]
+            ],
+            [
+                'name' => '🎬Youtube',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🔰国外流量'
+                    ],
+                    'regex' => '(.*)',
+                ]
+            ],
+            [
+                'name' => '🎬Netflix',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🔰国外流量'
+                    ],
+                    'regex' => '(.*)',
+                ]
+            ],
+            [
+                'name' => '🎬哔哩哔哩',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🚀直接连接'
+                    ],
+                    'regex' => '(.*)',
+                ]
+            ],
+            [
+                'name' => '🎬国外媒体',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🔰国外流量'
+                    ],
+                    'regex' => '(.*)',
+                ]
+            ],
+            [
+                'name' => '🍎苹果服务',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        '🚀直接连接',
+                        '🔰国外流量'
+                    ]
+                ]
+            ],
+            [
+                'name' => 'URL-Test',
+                'type' => 'url-test',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+			[
+                'name' => 'Fallback',
+                'type' => 'fallback',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],
+			[
+                'name' => 'Load-Balance',
+                'type' => 'load-balance',
+                'content' => [
+                    'regex' => '(.*)',
+                ],
+				'url'=> 'http://www.gstatic.com/generate_204',
+                'interval' => 300
+            ],			
+            [
+                'name' => '🚀直接连接',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        'DIRECT'
+                    ]
+                ]
+            ]
+        ],
+        'rules' => [
+            'source' => 'clash_rule_2.tpl'
         ]
     ]	
 ];

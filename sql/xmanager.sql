@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `accountid` text NOT NULL,
   `accountpassword` text NOT NULL,
   `allow_check` TINYINT(1) NOT NULL DEFAULT '0',
-  `accountlevel`text  NULL DEFAULT NULL
+  `accountlevel` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -55,7 +55,8 @@ CREATE TABLE IF NOT EXISTS `config` (
 
 
 INSERT INTO `config` (`name`, `value`) VALUES
-('dev_limit_type', 0),
+('clash_profile_lang', 'cn'),
+('dev_limit_type', 1),
 ('f2fpay_callback', 0),
 ('limit_phone_numbers', 0),
 ('allowed_phone_numbers', ''),
@@ -70,7 +71,6 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('paypal_type', '1'),
 ('send_order_email', '0'),
 ('accessdenied', '0'),
-('add_emoji_to_server_name', '1'),
 ('admin_telegram', ''),
 ('alipay', '1'),
 ('alipay_url', ''),
@@ -130,6 +130,7 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('enable_vpay_alipay', '0'),
 ('enable_vpay_wechat', '0'),
 ('exp_reset', '1'),
+('exp_reset_level', '1'),
 ('f2fpay_app_id', ''),
 ('f2fpay_currency_code', 'CNY'),
 ('f2fpay_private_key', ''),
@@ -144,10 +145,10 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('google_tracking_id', ''),
 ('h_captcha_key', ''),
 ('h_captcha_secrete', ''),
-('jkstate', '1'),
+('jkstate', 0),
 ('lastheart', NULL),
 ('lastpay', NULL),
-('latesversion', 'v4.32'),
+('latesversion', 'v4.33'),
 ('latesversioncontent', ''),
 ('LoginLogs', '1'),
 ('loginverify', '0'),
@@ -202,7 +203,7 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('smtp_ssl', '0'),
 ('smtp_username', ''),
 ('statsupdate', '10'),
-('stripe_currency_code', 'CNY'),
+('stripe_currency_code', 'USD'),
 ('stripe_key', ''),
 ('stripe_webhook', ''),
 ('subUrl', 'https://web.xyz.com/link/'),
@@ -231,7 +232,7 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('twillo_number', ''),
 ('user_currecy_switch', '0'),
 ('user_language_select', '0'),
-('version', 'v4.32'),
+('version', 'v4.33'),
 ('ViewLogs', '0'),
 ('vpay_currency_code', 'CNY'),
 ('vpay_order_exp', '5'),
@@ -667,7 +668,8 @@ CREATE TABLE IF NOT EXISTS `package` (
   `group` int(5) NOT NULL DEFAULT '1',
   `level` int(5) NOT NULL DEFAULT '0',
   `note` longtext DEFAULT NULL,
-  `topup_price` decimal(12,2) NOT NULL DEFAULT '0.00'
+  `topup_price` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `sort` int(2) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -726,6 +728,7 @@ CREATE TABLE IF NOT EXISTS `servers` (
   `name` varchar(128) NOT NULL,
   `type` int(3) NOT NULL,
   `server` varchar(300) NOT NULL,
+  `rserver` varchar(300) DEFAULT NULL,
   `headertype` text NOT NULL,
   `port` int(10) NOT NULL DEFAULT '443',
   `outside_port` varchar(10) DEFAULT NULL,
@@ -751,9 +754,11 @@ CREATE TABLE IF NOT EXISTS `servers` (
   `method` varchar(50) NOT NULL DEFAULT 'aes-128-gcm',
   `mu_only` int(2) NOT NULL DEFAULT '1',
   `allowinsecure` tinyint(2) NOT NULL DEFAULT '0',
-  `rserver` varchar(300) DEFAULT NULL,
   `cloudflare` tinyint(1) NOT NULL DEFAULT '0',
-  `cloudflare_cdn` tinyint(1) NOT NULL DEFAULT '0'
+  `cloudflare_cdn` tinyint(1) NOT NULL DEFAULT '0',
+  `relay` int(2) NOT NULL DEFAULT '0',
+  `relayid` int(2) NOT NULL DEFAULT '0',
+  `listenip` varchar(15) NOT NULL DEFAULT '0.0.0.0'
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 
@@ -881,7 +886,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `notification` int(3) NOT NULL DEFAULT '1',
   `notify_expire` int(2) NOT NULL DEFAULT '1',
   `notify_usedup` int(2) NOT NULL DEFAULT '1',
-  `ref_by` tinyint(11) NULL DEFAULT NULL,
+  `ref_by` TINYINT(11) NULL DEFAULT NULL,
   `notice_status` int(10) NOT NULL DEFAULT '0',
   `notice_id` text,
   `affclicks` int(20) NOT NULL DEFAULT '0',
@@ -891,7 +896,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `aff_pending` decimal(12,2) NOT NULL DEFAULT '0.00',
   `aff_balance` decimal(12,2) NOT NULL DEFAULT '0.00',
   `aff_account` varchar(50) DEFAULT NULL,
-  `aff_with_mode` int(2) NOT NULL DEFAULT '1'
+  `aff_with_mode` int(2) NOT NULL DEFAULT '1',
+  `relay_user` int(2) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -1105,4 +1111,3 @@ ALTER TABLE `cloudflare`
 
 ALTER TABLE `cloudflare`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-    

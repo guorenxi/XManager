@@ -25,11 +25,11 @@
         "esdeathlove/datatables": "^1.6",
         "ramsey/uuid": "*",
         "khanamiryan/qrcode-detector-decoder": "*",
-        "symfony/yaml": "*",
+        "symfony/yaml": "^4.4@dev",
         "endroid/qr-code": "^2.5",
         "paypal/paypal-checkout-sdk": "1.0.1",
         "twilio/sdk": "*",
-        "stripe/stripe-php": "7.0.0",
+        "stripe/stripe-php": "^7.105",
         "aws/aws-sdk-php":"3.202.2",
         "irazasyed/telegram-bot-sdk": "^3.4.1",
         "longman/telegram-bot": "*",
@@ -39,7 +39,7 @@
         "league/omnipay": "^3",
         "liushoukun/omnipay-alipay": "*",
         "omnipay/paypal": "*",
-		"jeremykendall/php-domain-parser": "*"
+        "jeremykendall/php-domain-parser": "*"
     },
     "autoload": {
         "psr-4": {
