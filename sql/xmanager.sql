@@ -148,7 +148,7 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('jkstate', 0),
 ('lastheart', NULL),
 ('lastpay', NULL),
-('latesversion', 'v4.33'),
+('latesversion', 'v4.34'),
 ('latesversioncontent', ''),
 ('LoginLogs', '1'),
 ('loginverify', '0'),
@@ -232,7 +232,7 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('twillo_number', ''),
 ('user_currecy_switch', '0'),
 ('user_language_select', '0'),
-('version', 'v4.33'),
+('version', 'v4.34'),
 ('ViewLogs', '0'),
 ('vpay_currency_code', 'CNY'),
 ('vpay_order_exp', '5'),
@@ -758,7 +758,9 @@ CREATE TABLE IF NOT EXISTS `servers` (
   `cloudflare_cdn` tinyint(1) NOT NULL DEFAULT '0',
   `relay` int(2) NOT NULL DEFAULT '0',
   `relayid` int(2) NOT NULL DEFAULT '0',
-  `listenip` varchar(15) NOT NULL DEFAULT '0.0.0.0'
+  `listenip` varchar(15) NOT NULL DEFAULT '0.0.0.0',
+  `sniffing` int(2) NOT NULL DEFAULT '1',
+  `proxy_protocol` int(2) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 

@@ -38,7 +38,7 @@
         "geoip2/geoip2": "*",
         "league/omnipay": "^3",
         "liushoukun/omnipay-alipay": "*",
-        "omnipay/paypal": "*",
+        "frainzy1477/paypal": "*",
         "jeremykendall/php-domain-parser": "*"
     },
     "autoload": {

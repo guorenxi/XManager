@@ -193,9 +193,6 @@ $XManager['Clash_Profiles'] = [
                 'content' => [
                     'regex' => '(.*)',
                     'right-proxies' => [
-					    'URL-Test',
-						'Fallback',
-						'Load-Balance',
                         '🚀Direct'
                     ],
                 ]
@@ -263,33 +260,6 @@ $XManager['Clash_Profiles'] = [
                 ]
             ],
             [
-                'name' => 'URL-Test',
-                'type' => 'url-test',
-                'content' => [
-                    'regex' => '(.*)',
-                ],
-				'url'=> 'http://www.gstatic.com/generate_204',
-                'interval' => 300
-            ],
-			[
-                'name' => 'Fallback',
-                'type' => 'fallback',
-                'content' => [
-                    'regex' => '(.*)',
-                ],
-				'url'=> 'http://www.gstatic.com/generate_204',
-                'interval' => 300
-            ],
-			[
-                'name' => 'Load-Balance',
-                'type' => 'load-balance',
-                'content' => [
-                    'regex' => '(.*)',
-                ],
-				'url'=> 'http://www.gstatic.com/generate_204',
-                'interval' => 300
-            ],
-            [
                 'name' => '🚀Direct',
                 'type' => 'select',
                 'content' => [
@@ -309,23 +279,23 @@ $XManager['Clash_Profiles'] = [
             'port'                => 7890,
             'socks-port'          => 7891,
             'redir-port'          => 7892,
-            'allow-lan'           => false,
+            'allow-lan'           => true,
             'mode'                => 'Rule',
             'log-level'           => 'info'
-        ],
-        'DNS' => [
+        ],	
+		'DNS' => [
             'enable'              => true,
             'ipv6'                => false,
             'listen'              => '0.0.0.0:53',
-            'enhanced-mode'       => 'fake-ip',
+            'enhanced-mode'       => 'redir-host',
             'fake-ip-range'       => '198.18.0.1/16',
             'nameserver'=>[
-                '119.29.29.29',
-                '1.1.1.1'
+                '114.114.114.114',
+                'tcp://223.5.5.5'
             ],
             'fallback'=>[
-                '1.0.0.1',
-                '8.8.8.8'
+                'tls://223.5.5.5:853',
+                'https://223.5.5.5/dns-query'
             ],
             'fallback-filter'=>[
                 'geoip'=> true,
@@ -335,16 +305,13 @@ $XManager['Clash_Profiles'] = [
             ]
         ],
         'Proxy' => [],
-        'ProxyGroup' => [
+        'Proxy Group' => [
 			[
                 'name' => '🔰国外流量',
                 'type' => 'select',
                 'content' => [
                     'regex' => '(.*)',
                     'right-proxies' => [
-					    'URL-Test',
-						'Fallback',
-						'Load-Balance',
                         '🚀直接连接'
                     ],
                 ]
@@ -418,33 +385,6 @@ $XManager['Clash_Profiles'] = [
                         '🔰国外流量'
                     ]
                 ]
-            ],
-            [
-                'name' => 'URL-Test',
-                'type' => 'url-test',
-                'content' => [
-                    'regex' => '(.*)',
-                ],
-				'url'=> 'http://www.gstatic.com/generate_204',
-                'interval' => 300
-            ],
-			[
-                'name' => 'Fallback',
-                'type' => 'fallback',
-                'content' => [
-                    'regex' => '(.*)',
-                ],
-				'url'=> 'http://www.gstatic.com/generate_204',
-                'interval' => 300
-            ],
-			[
-                'name' => 'Load-Balance',
-                'type' => 'load-balance',
-                'content' => [
-                    'regex' => '(.*)',
-                ],
-				'url'=> 'http://www.gstatic.com/generate_204',
-                'interval' => 300
             ],
             [
                 'name' => '🚀直接连接',
