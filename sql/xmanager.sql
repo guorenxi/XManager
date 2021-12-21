@@ -233,7 +233,6 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('user_currecy_switch', '0'),
 ('user_language_select', '0'),
 ('version', 'v4.34'),
-('ViewLogs', '0'),
 ('vpay_currency_code', 'CNY'),
 ('vpay_order_exp', '5'),
 ('webapisafe', '0'),
