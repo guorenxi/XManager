@@ -16,7 +16,7 @@
 	<div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
         <div class="card" >
 			<div class="card-header d-flex justify-content-between align-items-center">
-			  <h4 class="card-title">{$lang->get('appSetup')}</h4>
+			  <h3 class="card-title">{$lang->get('appSetup')}</h3>
 			  <i class="fad fa-sync font-medium-3 cursor-pointer" id="reset-link" style="color:{$Config['app_color']}" data-toggle="tooltip" data-placement="bottom" title="{$lang->get('ResetConfigLink')}"></i>
 			</div>
             <div class="card mlist ">
