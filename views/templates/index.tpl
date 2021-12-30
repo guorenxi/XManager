@@ -1,5 +1,7 @@
-!odMbo!
-svD+zQS17hHPUAS48VJQXm4000000000CmYazhT4rXGNzYZFoeXKTzuzJLPE2EVNnW32loppaZJh
-x86ocB1R9h+mAdiw5PPiIjSTUbG3qEW4sfZuOrLJMO5VRSDkWlGfCxk8y0fqRCOtTFzhPiV5YFXS
-RV336Rj1jTJtdF/g/xA2qwjbEAQdlNxmASdpeYYsYYa/A0lZzUaAJtwOrxP6JYOK1Uc9w5SsL0nh
-x3pD7mD5Br2U/e8tXfWB
+{if $user->isLogin}
+   <script> window.location.href="/portal/clientarea"</script>
+{else} 
+   <script>window.location.href="/login"</script> 
+{/if}
+
+
