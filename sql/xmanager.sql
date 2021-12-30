@@ -224,7 +224,7 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('trafficexpnotify', '0'),
 ('trafficexpnotifydays', '1,3,5,7'),
 ('trafficusednotify', '0'),
-('trafficusednotifylimit', '100,200,500'),
+('trafficusednotifylimit', '500'),
 ('twillo_account_sid', ''),
 ('twillo_auth_token', ''),
 ('twillo_number', ''),
