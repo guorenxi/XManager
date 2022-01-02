@@ -13,6 +13,7 @@ CREATE TABLE `alive_ip` (
   `id` bigint(20) NOT NULL,
   `nodeid` int(11) NOT NULL,
   `userid` int(11) NOT NULL,
+  `username` VARCHAR(250) NULL DEFAULT NULL,
   `ip` text NOT NULL,
   `datetime` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -116,6 +117,7 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('enable_stripe_wechat', '0'),
 ('enable_telegram', '0'),
 ('enable_theadpay', '0'),
+('enable_token188', 0),
 ('enable_vpay', '0'),
 ('enable_vpay_alipay', '0'),
 ('enable_vpay_wechat', '0'),
@@ -139,7 +141,7 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('jkstate', '0'),
 ('lastheart', NULL),
 ('lastpay', NULL),
-('latesversion', 'v5.01'),
+('latesversion', 'v5.00'),
 ('latesversioncontent', ''),
 ('limit_phone_numbers', '0'),
 ('LoginLogs', '1'),
@@ -221,16 +223,21 @@ INSERT INTO `config` (`name`, `value`) VALUES
 ('theadpay_key', ''),
 ('theadpay_mchid', ''),
 ('theadpay_url', ''),
+('token188_key', ''),
+('token188_mchid', ''),
+('token188_url', 'https://api.token188.com/utg/pay/address'),
+('token188_callback', ''),
+('token188_currency_code', 'CNY'),
 ('trafficexpnotify', '0'),
 ('trafficexpnotifydays', '1,3,5,7'),
 ('trafficusednotify', '0'),
-('trafficusednotifylimit', '500'),
+('trafficusednotifylimit', '100,200,500'),
 ('twillo_account_sid', ''),
 ('twillo_auth_token', ''),
 ('twillo_number', ''),
 ('user_currecy_switch', '0'),
 ('user_language_select', '0'),
-('version', 'v5.01'),
+('version', 'v5.00'),
 ('ViewLogs', '0'),
 ('vpay_currency_code', 'CNY'),
 ('vpay_order_exp', '5'),
@@ -566,6 +573,13 @@ CREATE TABLE `email_verify` (
   `expire_in` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `faqs` (
+  `id` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 0,
+  `question` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 CREATE TABLE `link` (
   `id` bigint(20) NOT NULL,
@@ -584,9 +598,10 @@ CREATE TABLE `link` (
 CREATE TABLE `login_ip` (
   `id` bigint(20) NOT NULL,
   `userid` bigint(20) NOT NULL,
+  `username` VARCHAR(250) NULL DEFAULT NULL,
   `ip` text NOT NULL,
   `datetime` bigint(20) NOT NULL,
-  `type` int(11) NOT NULL
+  `type` VARCHAR(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -625,6 +640,7 @@ CREATE TABLE `orders` (
   `state` int(11) NOT NULL DEFAULT 0,
   `type` int(11) NOT NULL,
   `userid` bigint(20) DEFAULT NULL,
+  `email` VARCHAR(250) NULL DEFAULT NULL
   `username` varchar(25) DEFAULT NULL,
   `total` decimal(12,2) DEFAULT NULL,
   `packagetype` varchar(2) DEFAULT NULL,
@@ -713,6 +729,7 @@ INSERT INTO `rule_list` (`id`, `name`, `regex`, `type`) VALUES
 CREATE TABLE `rule_log` (
   `id` bigint(20) NOT NULL,
   `user_id` bigint(20) NOT NULL,
+  `username` VARCHAR(250) NULL DEFAULT NULL,
   `list_id` bigint(20) NOT NULL,
   `datetime` bigint(20) NOT NULL,
   `server_id` int(11) NOT NULL,
@@ -733,19 +750,19 @@ CREATE TABLE `servers` (
   `protocol` text CHARACTER SET utf8mb4 NOT NULL,
   `flow` text CHARACTER SET utf8mb4 NOT NULL,
   `security` varchar(5) CHARACTER SET utf8mb4 NOT NULL DEFAULT 'tls',
-  `xhost` longtext CHARACTER SET utf8mb4 NOT NULL,
-  `xpath` longtext CHARACTER SET utf8mb4 NOT NULL,
+  `xhost` longtext CHARACTER SET utf8mb4 DEFAULT NULL,
+  `xpath` longtext CHARACTER SET utf8mb4 DEFAULT NULL,
   `info` varchar(128) CHARACTER SET utf8mb4 DEFAULT NULL,
   `status` varchar(128) CHARACTER SET utf8mb4 DEFAULT NULL,
   `rate` float NOT NULL DEFAULT 1,
   `level` int(11) NOT NULL DEFAULT 0,
   `speedlimit` int(20) NOT NULL DEFAULT 0,
-  `tfo` tinyint(1) NOT NULL DEFAULT 0,
+  `sni` longtext CHARACTER SET utf8mb4 DEFAULT NULL,
   `bandwidth` bigint(20) NOT NULL DEFAULT 0,
   `bandwidth_limit` bigint(20) NOT NULL DEFAULT 0,
   `bandwidthlimit_resetday` int(5) NOT NULL DEFAULT 0,
   `heartbeat` bigint(20) NOT NULL DEFAULT 0,
-  `node_ip` text CHARACTER SET utf8mb4 DEFAULT NULL,
+  `node_ip` longtext CHARACTER SET utf8mb4 NOT NULL,
   `group` int(11) NOT NULL DEFAULT 0,
   `online` tinyint(1) NOT NULL DEFAULT 1,
   `sort` int(3) NOT NULL DEFAULT 0,
@@ -762,7 +779,7 @@ CREATE TABLE `servers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
-INSERT INTO `servers` (`id`, `emoji`, `name`, `type`, `server`, `rserver`, `headertype`, `port`, `outside_port`, `protocol`, `flow`, `security`, `xhost`, `xpath`, `info`, `status`, `rate`, `level`, `speedlimit`, `tfo`, `bandwidth`, `bandwidth_limit`, `bandwidthlimit_resetday`, `heartbeat`, `node_ip`, `group`, `online`, `sort`, `method`, `mu_only`, `allowinsecure`, `cloudflare`, `cloudflare_cdn`, `relay`, `relayid`, `listenip`, `sniffing`, `proxy_protocol`) VALUES
+INSERT INTO `servers` (`id`, `emoji`, `name`, `type`, `server`, `rserver`, `headertype`, `port`, `outside_port`, `protocol`, `flow`, `security`, `xhost`, `xpath`, `info`, `status`, `rate`, `level`, `speedlimit`, `sni`, `bandwidth`, `bandwidth_limit`, `bandwidthlimit_resetday`, `heartbeat`, `node_ip`, `group`, `online`, `sort`, `method`, `mu_only`, `allowinsecure`, `cloudflare`, `cloudflare_cdn`, `relay`, `relayid`, `listenip`, `sniffing`, `proxy_protocol`) VALUES
 (1, 1, 'Expired/过期', 0, '127.0.0.1', NULL, '', 443, '', '', '', 'tls', '', '', 'GB', NULL, 0, -1, 0, 0, 0, 0, 0, 0, '127.0.0.1', 0, 0, 1, 'aes-128-gcm', 1, 0, 0, 0, 0, 0, '0.0.0.0', 1, 0);
 
 
@@ -900,11 +917,6 @@ CREATE TABLE `user` (
   `relay_user` int(2) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
-INSERT INTO `user` (`id`, `user_name`, `email`, `pass`, `passwd`, `method`, `uuid`, `mobile`, `t`, `u`, `d`, `transfer_enable`, `enable`, `reg_date`, `money`, `expire_time`, `reg_ip`, `speedlimit`, `connector`, `role`, `last_day_t`, `level`, `expire_in`, `remark`, `group`, `reset_day`, `reset_bandwidth`, `telegram_id`, `telegram_name`, `expire_notified`, `expire_notified_days`, `traffic_notified`, `traffic_notified_limit`, `afflink`, `notification`, `notify_expire`, `notify_usedup`, `ref_by`, `notice_status`, `notice_id`, `affclicks`, `ga_token`, `ga_enable`, `aff_completed`, `aff_pending`, `aff_balance`, `aff_account`, `aff_with_mode`, `relay_user`) VALUES
-(1, 'Admin', 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'jOtkj9bV', 'aes-128-gcm', 'ec92672e-ee90-3671-b887-79e704511148', '', 0, 0, 0, 1073741824, 1, '2021-12-24 09:07:56', '0.00', 0, '127.0.0.1', 1024, 1, 1, 0, 0, '2022-01-31 09:07:00', '', 0, 0, '0.00', NULL, NULL, 0, 0, 0, 0, '3gp06KcCCv', 1, 1, 1, 0, 0, '', 0, 'FBZJ3QTFINBZUCRO', 0, '0.00', '0.00', '0.00', NULL, 1, 0);
-
-
 CREATE TABLE `user_subscribe_log` (
   `id` int(11) UNSIGNED NOT NULL,
   `user_name` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -929,6 +941,7 @@ CREATE TABLE `user_token` (
 CREATE TABLE `user_traffic_log` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
+  `username` VARCHAR(250) NULL DEFAULT NULL,
   `u` bigint(20) NOT NULL,
   `d` bigint(20) NOT NULL,
   `node_id` int(11) NOT NULL,
@@ -969,6 +982,10 @@ ALTER TABLE `currency`
 
 ALTER TABLE `email_verify`
   ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `faqs`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
 
 ALTER TABLE `link`
   ADD PRIMARY KEY (`id`),
@@ -1059,6 +1076,9 @@ ALTER TABLE `currency`
 ALTER TABLE `email_verify`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
+ALTER TABLE `faqs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  
 ALTER TABLE `link`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
