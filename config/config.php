@@ -1,7 +1,8 @@
 <?php
 $XManager['debug'] 			 = false;
-$XManager['timeZone'] 	  	 = "PRC"; 
+$XManager['timeZone'] 	  	 = "Asia/Shanghai";   ## https://www.php.net/manual/en/timezones.php
 $XManager['default_lang'] 	 = "zh-cn"; #en/zh-cn
+
 
 // db_host|db_socket 二选一，若设置 db_socket 则 db_host 会被忽略，不用请留空。若数据库在本机上推荐用 db_socket。
 // db_host 例: localhost（可解析的主机名）, 127.0.0.1（IP 地址）, 10.0.0.2:4406（含端口)
@@ -10,7 +11,7 @@ $XManager['default_lang'] 	 = "zh-cn"; #en/zh-cn
 $XManager['db_driver']    	 = 'mysql';   
 $XManager['db_host']      	 = 'localhost';
 $XManager['db_socket']    	 = '';
-$XManager['db_database']  	 = 'xmanager';           
+$XManager['db_database']  	 = 'manager';           
 $XManager['db_username']  	 = 'root';             
 $XManager['db_password']  	 = '';           
 $XManager['db_charset']   	 = 'utf8mb4';

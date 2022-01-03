@@ -1,64 +1,72 @@
-<?php //004fb
-if(!extension_loaded('ionCube Loader')){$__oc=strtolower(substr(php_uname(),0,3));$__ln='ioncube_loader_'.$__oc.'_'.substr(phpversion(),0,3).(($__oc=='win')?'.dll':'.so');if(function_exists('dl')){@dl($__ln);}if(function_exists('_il_exec')){return _il_exec();}$__ln='/ioncube/'.$__ln;$__oid=$__id=realpath(ini_get('extension_dir'));$__here=dirname(__FILE__);if(strlen($__id)>1&&$__id[1]==':'){$__id=str_replace('\\','/',substr($__id,2));$__here=str_replace('\\','/',substr($__here,2));}$__rd=str_repeat('/..',substr_count($__id,'/')).$__here.'/';$__i=strlen($__rd);while($__i--){if($__rd[$__i]=='/'){$__lp=substr($__rd,0,$__i).$__ln;if(file_exists($__oid.$__lp)){$__ln=$__lp;break;}}}if(function_exists('dl')){@dl($__ln);}}else{die('The file '.__FILE__." is corrupted.\n");}if(function_exists('_il_exec')){return _il_exec();}echo("Site error: the ".(php_sapi_name()=='cli'?'ionCube':'<a href="http://www.ioncube.com">ionCube</a>')." PHP Loader needs to be installed. This is a widely used PHP extension for running ionCube protected PHP code, website security and malware blocking.\n\nPlease visit ".(php_sapi_name()=='cli'?'get-loader.ioncube.com':'<a href="http://get-loader.ioncube.com">get-loader.ioncube.com</a>')." for install assistance.\n\n");exit(199);
-?>
-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
-TBNgXeHmtM3+S/PWxcyWZnCLrykOxHQjpLBwsG==
+<?php
+
+use Selective\BasePath\BasePathMiddleware;
+use Slim\App;
+use Slim\Exception\HttpNotFoundException;
+use Slim\Exception\HttpMethodNotAllowedException;
+use Slim\Exception\HttpInternalServerErrorException;
+use Slim\Psr7\Response;
+use Psr\Http\Message\ServerRequestInterface;
+use App\Template as View;
+use Middlewares\Whoops;
+
+
+return function (App $app) {
+
+	require __DIR__ . '/settings.php';
+
+	$app->addBodyParsingMiddleware();
+	
+	$app->addRoutingMiddleware();
+	
+	$app->add(BasePathMiddleware::class);
+	
+	$errorMiddleware = $app->addErrorMiddleware(
+		(bool)$settings['error']['display_error_details'], 
+		(bool)$settings['error']['log_errors'], 
+		(bool)$settings['error']['log_error_details']
+	);
+
+
+	// Set the Not Found Handler
+	$errorMiddleware->setErrorHandler(
+		HttpNotFoundException::class,
+		function (ServerRequestInterface $request, Throwable $exception, bool $displayErrorDetails) {
+			$response = new Response();
+			$view = View::getSmarty();
+			$response->getBody()->write($view->fetch('errors/404.tpl'));
+			return $response;
+		});
+
+	// Set the Not Allowed Handler
+	$errorMiddleware->setErrorHandler(
+		HttpMethodNotAllowedException::class,
+		function (ServerRequestInterface $request, Throwable $exception, bool $displayErrorDetails) {
+			$response = new Response();
+			$view = View::getSmarty();
+			$response->getBody()->write($view->fetch('errors/405.tpl'));
+			return $response;
+		});
+
+	// Set the Not Allowed Handler
+	if ($XManager['debug'] == false) {
+		$errorMiddleware->setErrorHandler(
+			HttpInternalServerErrorException::class,
+			function (ServerRequestInterface $request, Throwable $exception, bool $displayErrorDetails) {
+				$response = new Response();
+				$view = View::getSmarty();
+				$response->getBody()->write($view->fetch('errors/500.tpl'));
+				return $response;
+			});	
+	}else{
+		$errorMiddleware->setErrorHandler(
+			HttpInternalServerErrorException::class,
+			function (ServerRequestInterface $request, Throwable $exception, bool $displayErrorDetails) {
+				$app->add(new Whoops());
+				$response = new Response();
+				$view = View::getSmarty();
+				$response->getBody()->write($view->fetch('errors/500.tpl'));
+				return $response;
+			});	
+	}	
+};

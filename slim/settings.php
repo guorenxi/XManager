@@ -1,56 +1,47 @@
-<?php //004fb
-if(!extension_loaded('ionCube Loader')){$__oc=strtolower(substr(php_uname(),0,3));$__ln='ioncube_loader_'.$__oc.'_'.substr(phpversion(),0,3).(($__oc=='win')?'.dll':'.so');if(function_exists('dl')){@dl($__ln);}if(function_exists('_il_exec')){return _il_exec();}$__ln='/ioncube/'.$__ln;$__oid=$__id=realpath(ini_get('extension_dir'));$__here=dirname(__FILE__);if(strlen($__id)>1&&$__id[1]==':'){$__id=str_replace('\\','/',substr($__id,2));$__here=str_replace('\\','/',substr($__here,2));}$__rd=str_repeat('/..',substr_count($__id,'/')).$__here.'/';$__i=strlen($__rd);while($__i--){if($__rd[$__i]=='/'){$__lp=substr($__rd,0,$__i).$__ln;if(file_exists($__oid.$__lp)){$__ln=$__lp;break;}}}if(function_exists('dl')){@dl($__ln);}}else{die('The file '.__FILE__." is corrupted.\n");}if(function_exists('_il_exec')){return _il_exec();}echo("Site error: the ".(php_sapi_name()=='cli'?'ionCube':'<a href="http://www.ioncube.com">ionCube</a>')." PHP Loader needs to be installed. This is a widely used PHP extension for running ionCube protected PHP code, website security and malware blocking.\n\nPlease visit ".(php_sapi_name()=='cli'?'get-loader.ioncube.com':'<a href="http://get-loader.ioncube.com">get-loader.ioncube.com</a>')." for install assistance.\n\n");exit(199);
-?>
-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
+<?php
+use App\XManager;
+
+$XManager = (new XManager())->GlobalConfig();
+// Should be set to 0 in production
+error_reporting(0);
+
+// Should be set to '0' in production
+ini_set('display_errors', '0');
+
+// Settings
+$settings = [];
+
+// Path settings
+$settings['root'] = dirname(__DIR__);
+
+// Error Handling Middleware settings
+$settings['error'] = [
+    // Should be set to false in production
+    'display_error_details' => $XManager['debug'],
+
+    // Parameter is passed to the default ErrorHandler
+    // View in rendered output by enabling the "displayErrorDetails" setting.
+    // For the console and unit tests we also disable it
+    'log_errors' => false,
+
+    // Display error details in error log
+    'log_error_details' => false,
+];
+
+$settings['commands'] = [
+    \App\Console\CreateAdminCommand::class,
+	\App\Console\ExchangeRateCommand::class,
+    \App\Console\setTelegramCommand::class,
+	\App\Console\BackupCommand::class,
+	\App\Console\CheckUpdateCommand::class,
+	\App\Console\ClearLogsCommand::class,
+	\App\Console\DataAutoResetCommand::class,
+	\App\Console\DataExpireStatusCommand::class,
+	\App\Console\DataResetCommand::class,
+	\App\Console\ServerStatusCommand::class,
+	\App\Console\UpdateCommand::class,
+	\App\Console\UsedDataStatusCommand::class,
+	\App\Console\DownloadAppsCommand::class,
+];
+
+return $settings;

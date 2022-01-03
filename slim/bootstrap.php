@@ -1,34 +1,22 @@
-<?php //004fb
-if(!extension_loaded('ionCube Loader')){$__oc=strtolower(substr(php_uname(),0,3));$__ln='ioncube_loader_'.$__oc.'_'.substr(phpversion(),0,3).(($__oc=='win')?'.dll':'.so');if(function_exists('dl')){@dl($__ln);}if(function_exists('_il_exec')){return _il_exec();}$__ln='/ioncube/'.$__ln;$__oid=$__id=realpath(ini_get('extension_dir'));$__here=dirname(__FILE__);if(strlen($__id)>1&&$__id[1]==':'){$__id=str_replace('\\','/',substr($__id,2));$__here=str_replace('\\','/',substr($__here,2));}$__rd=str_repeat('/..',substr_count($__id,'/')).$__here.'/';$__i=strlen($__rd);while($__i--){if($__rd[$__i]=='/'){$__lp=substr($__rd,0,$__i).$__ln;if(file_exists($__oid.$__lp)){$__ln=$__lp;break;}}}if(function_exists('dl')){@dl($__ln);}}else{die('The file '.__FILE__." is corrupted.\n");}if(function_exists('_il_exec')){return _il_exec();}echo("Site error: the ".(php_sapi_name()=='cli'?'ionCube':'<a href="http://www.ioncube.com">ionCube</a>')." PHP Loader needs to be installed. This is a widely used PHP extension for running ionCube protected PHP code, website security and malware blocking.\n\nPlease visit ".(php_sapi_name()=='cli'?'get-loader.ioncube.com':'<a href="http://get-loader.ioncube.com">get-loader.ioncube.com</a>')." for install assistance.\n\n");exit(199);
-?>
-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
+<?php
+use DI\ContainerBuilder; 
+use Slim\App;
+
+$containerBuilder = new ContainerBuilder();
+
+// Set up settings
+$containerBuilder->addDefinitions(__DIR__ . '/container.php');
+
+// Build PHP-DI Container instance
+$container = $containerBuilder->build();
+
+// Create App instance
+$app = $container->get(App::class);
+		
+// Register routes
+(require __DIR__ . '/routes.php')($app);
+
+// Register middleware
+(require __DIR__ . '/middleware.php')($app);
+
+return $app;
