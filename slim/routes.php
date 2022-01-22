@@ -1,362 +1,447 @@
-<?php
-
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-use Slim\App;
-use App\Http\Middleware\AdminMiddleware;
-use App\Http\Middleware\AppMiddleware;
-use App\Http\Middleware\WebapiMiddleware;
-use App\Http\Middleware\GuestMiddleware;
-use App\Http\Middleware\UserMiddleware;
-use App\Http\Middleware\AdminLoginMiddleware;
-use App\Http\Middleware\CartMiddleware;
-use Slim\Routing\RouteCollectorProxy;
-
-return function (App $app) {
-	$app->get('/license',          				\App\Http\Controllers\HomeController::class . ':license');
-    $app->get('/',          					\App\Http\Controllers\HomeController::class . ':index');
-    $app->get('/404',       					\App\Http\Controllers\HomeController::class . ':page404');
-    $app->get('/405',       					\App\Http\Controllers\HomeController::class . ':page405');
-    $app->get('/500',       					\App\Http\Controllers\HomeController::class . ':page500');
-    $app->get('/tos',       					\App\Http\Controllers\HomeController::class . ':tos');
-	$app->get('/restricted',       				\App\Http\Controllers\HomeController::class . ':restricted');
-    $app->get('/staff',     					\App\Http\Controllers\HomeController::class . ':staff');
-    $app->get('/index',     	  				\App\Http\Controllers\HomeController::class . ':index');
-	$app->get('/maintenance',     				\App\Http\Controllers\HomeController::class . ':maintenance');	
-    $app->post('/telegram_callback',    		\App\Http\Controllers\HomeController::class . ':telegram');
-	$app->group('', function (RouteCollectorProxy $group) {
-		$group->get('/packages',    			\App\Http\Controllers\HomeController::class . ':packages')->add(new AppMiddleware());
-		$group->get('/checkout', 	    		\App\Http\Controllers\HomeController::class . ':checkout')->add(new AppMiddleware());
-	})->add(new CartMiddleware());
-	$app->post('/coupon_check',        			\App\Http\Controllers\HomeController::class . ':CouponCheck');
-	$app->post('/recaptcha',                	\App\Http\Controllers\User\CaptchaController::class . ':recaptcha');	
-	$app->post('/affclicks',        			\App\Http\Controllers\User\RegController::class . ':affclicks');
-    $app->post('/send',            				\App\Http\Controllers\User\RegController::class . ':sendVerify');
-	$app->post('/tgcode',            			\App\Http\Controllers\User\RegController::class . ':TGVerify');
-    $app->post('/registerUser',        			\App\Http\Controllers\HomeController::class . ':registerUser');	
-	$app->get('/gareset',                   	\App\Http\Controllers\User\SettingsController::class . ':GaReset');
-	$app->post('/gaset',                  		\App\Http\Controllers\User\SettingsController::class . ':GaSet');	
-	$app->get('/getOrder',  					\App\Payments\VPay::class . ':getOrder');
-	$app->get('/appPush',  						\App\Payments\VPay::class . ':appPush');
-	$app->get('/checkOrder',  					\App\Payments\VPay::class . ':checkOrder');
-	$app->get('/appHeart',  					\App\Payments\VPay::class . ':appHeart');
-	$app->get('/closeOrder',  					\App\Payments\VPay::class . ':closeOrder');	
-	$app->get('/getState',  					\App\Payments\VPay::class . ':getState');
-	$app->get('/setExpire', 					\App\Payments\VPay::class . ':setExpire');	
-	$app->get('/create',  			    		\App\Payments\VPay::class . ':createOrder');	
-	$app->post('/coinpayments_callback', 		\App\Payments\CoinPayments::class . ':coinpayments_callback');
-	$app->get('/coinpayments_callback', 		\App\Payments\CoinPayments::class . ':coinpayments_callback');	
-	$app->post('/f2fpay_callback', 		    	\App\Payments\F2F::class . ':f2fpay_callback');
-	$app->get('/f2fpay_callback', 		    	\App\Payments\F2F::class . ':f2fpay_callback');
-	$app->post('/f2fpay_query', 		    	\App\Payments\F2F::class . ':f2fpay_query');
-	$app->get('/f2fpay_query', 		    		\App\Payments\F2F::class . ':f2fpay_query');	
-	$app->post('/theadpay_callback', 			\App\Payments\THeadPay::class . ':theadpay_callback');
-	$app->get('/theadpay_callback', 			\App\Payments\THeadPay::class . ':theadpay_callback');	
-	$app->post('/stripe_callback', 				\App\Payments\StripePay::class . ':stripe_callback');
-	$app->get('/stripe_callback', 				\App\Payments\StripePay::class . ':stripe_callback');	
-	$app->post('/mgate_callback', 				\App\Payments\MGatepay::class . ':mgate_callback');
-	$app->get('/mgate_callback', 				\App\Payments\MGatepay::class . ':mgate_callback');	
-	$app->post('/easypay_callback', 			\App\Payments\EasyPay::class . ':easypay_callback');
-	$app->get('/easypay_callback', 				\App\Payments\EasyPay::class . ':easypay_callback');	
-	$app->post('/paypal_callback', 				\App\Payments\PayPalExpress::class . ':callback');
-	$app->get('/paypal_callback', 		 		\App\Payments\PayPalExpress::class . ':callback');	
-	$app->get('/enQrcode',  					\App\Payments\QrcodeGenerator::class . ':enQrcode');	
-	$app->get('/getGoogleToken',            	\App\Services\MailServices\GoogleToken::class . ':getGoogleToken');
-	$app->post('/getGoogleToken',           	\App\Services\MailServices\GoogleToken::class . ':getGoogleToken');
-			
-    $app->group('/portal', function (RouteCollectorProxy $group) {
-        $group->get('',                      	 \App\Http\Controllers\User\IndexController::class . ':index');
-        $group->get('/clientarea',           	 \App\Http\Controllers\User\IndexController::class . ':index');
-		$group->get('/license',              	 \App\Http\Controllers\User\IndexController::class . ':license');
-		$group->post('/userdetails',         	 \App\Http\Controllers\User\IndexController::class . ':userdetails');
-        $group->get('/suspend',              	 \App\Http\Controllers\User\IndexController::class . ':suspend');
-		$group->get('/sys',                  	 \App\Http\Controllers\User\IndexController::class . ':sys');
-        $group->get('/logout',               	 \App\Http\Controllers\User\IndexController::class . ':logout');
-        $group->get('/backtoadmin',          	 \App\Http\Controllers\User\IndexController::class . ':backtoadmin');
-		$group->get('/traffic_reset',        	 \App\Http\Controllers\User\IndexController::class . ':Allow_Reset');
-		
-		$group->get('/telegram_reset',       	 \App\Http\Controllers\User\SettingsController::class . ':telegram_reset');
-        $group->post('/url_reset',           	 \App\Http\Controllers\User\SettingsController::class . ':resetURL');
-		$group->post('/mobilecode',          	 \App\Http\Controllers\User\SettingsController::class . ':mobilecode');
-		$group->post('/mobileverify',        	 \App\Http\Controllers\User\SettingsController::class . ':mobileverify'); 
-		
-		$group->get('/affiliate',           	 \App\Http\Controllers\User\AffiliateController::class . ':affiliate');
-        $group->get('/affiliate_reset',      	 \App\Http\Controllers\User\AffiliateController::class . ':resetAfflink');
-		$group->post('/affiliate_ajax',      	 \App\Http\Controllers\User\AffiliateController::class . ':affiliate_ajax');
-		$group->post('/payout',              	 \App\Http\Controllers\Admin\AffiliateController::class . ':rebate');
-		
-		$group->get('/notice',             	 	 \App\Http\Controllers\User\NoticeController::class . ':notice');
-		$group->get('/faqs',              	 	 \App\Http\Controllers\User\FaqController::class . ':faqs');
-			
-		$group->post('/notify',              	 \App\Http\Controllers\User\SettingsController::class . ':notification');
-
-		$group->get('/settings',             	 \App\Http\Controllers\User\SettingsController::class . ':settings')->add(new AppMiddleware());
-		$group->post('/loginajax',           	 \App\Http\Controllers\User\SettingsController::class . ':login_ajax');		
-		$group->post('/method',              	 \App\Http\Controllers\User\SettingsController::class . ':update_method');
-		$group->get('/kill',                 	 \App\Http\Controllers\User\SettingsController::class . ':kill');
-        $group->post('/kill',                    \App\Http\Controllers\User\SettingsController::class . ':handleKill');
-		$group->post('/password',             	 \App\Http\Controllers\User\SettingsController::class . ':updateLogin');
-        $group->post('/pwd',                 	 \App\Http\Controllers\User\SettingsController::class . ':updateTrojanUUID');
-		
-		$group->get('/accounts',             	 \App\Http\Controllers\User\AccountsController::class . ':account')->add(new AppMiddleware());
-		$group->post('/idcheck',            	 \App\Http\Controllers\User\AccountsController::class . ':idCheck');
-		
-        $group->get('/servers',              	 \App\Http\Controllers\User\ServerController::class . ':server');
-        $group->get('/trojan/{id}',       	 	 \App\Http\Controllers\User\ServerController::class . ':trojan');
-		$group->get('/shadowsocks/{id}',     	 \App\Http\Controllers\User\ServerController::class . ':shadowsocks');
-		$group->get('/ssv2plugin/{id}',      	 \App\Http\Controllers\User\ServerController::class . ':ssv2plugin');
-		$group->get('/vmess/{id}',     		 	 \App\Http\Controllers\User\ServerController::class . ':vmess');
-		$group->get('/vless/{id}',     		 	 \App\Http\Controllers\User\ServerController::class . ':vless');
-			
-        $group->get('/packages',             	 \App\Http\Controllers\User\PackageController::class . ':package')->add(new AppMiddleware());
-		$group->get('/checkout', 	    	 	 \App\Http\Controllers\User\PackageController::class . ':checkout')->add(new AppMiddleware());
-		$group->get('/topup', 	    	 	 	 \App\Http\Controllers\User\PackageController::class . ':topup')->add(new AppMiddleware());
-		$group->get('/renew', 	     	     	 \App\Http\Controllers\User\PackageController::class . ':renew')->add(new AppMiddleware());
-        $group->post('/coupon_check',        	 \App\Http\Controllers\User\PackageController::class . ':CouponCheck');
-        $group->post('/buy',                  	 \App\Http\Controllers\User\PackageController::class . ':buy');		
-		
-		$group->get('/orders',               	 \App\Http\Controllers\User\PackageController::class . ':order');	
-        $group->post('/order_ajax',          	 \App\Http\Controllers\User\PackageController::class . ':order_ajax');		
-		
-		$group->post('/coinpayments', 		  	 \App\Payments\CoinPayments::class . ':coinpayments');
-		$group->get('/coinpayments_status',   	 \App\Payments\CoinPayments::class . ':coinpayments_checkorder');
-		$group->post('/coinpayments_cancel',  	 \App\Payments\CoinPayments::class . ':coinpayments_cancel');
-		
-		$group->post('/f2f', 		    	  	 \App\Payments\F2F::class . ':f2f');
-		$group->get('/f2fpay_status',      	  	 \App\Payments\F2F::class . ':f2fpay_checkorder');
-		$group->post('/f2fpay_cancel',     	  	 \App\Payments\F2F::class . ':f2fpay_cancel');
-		
-		$group->post('/theadpay', 		      	 \App\Payments\THeadPay::class . ':theadpay');
-		$group->get('/theadpay_status',       	 \App\Payments\THeadPay::class . ':theadpay_checkorder');
-		$group->post('/theadpay_cancel',      	 \App\Payments\THeadPay::class . ':theadpay_cancel');
-		
-		$group->post('/token188', 		      	 \App\Payments\Token188::class . ':token188');
-
-		$group->post('/stripe', 		      	 \App\Payments\StripePay::class . ':stripe');
-		$group->get('/stripe_checkorder',     	 \App\Payments\StripePay::class . ':stripe_checkorder');
-		$group->post('/stripe_cancel',     	  	 \App\Payments\StripePay::class . ':stripe_cancel');
-		
-		$group->post('/paypal', 		      	 \App\Payments\PayPal::class . ':paypal');
-		$group->post('/paypal/create', 		  	 \App\Payments\PayPalExpress::class . ':create');
-		
-		$group->post('/vpay', 				  	 \App\Payments\VPay::class . ':vpay_order');
-		$group->post('/delorder',             	 \App\Payments\VPay::class . ':delorder');
-		$group->get('/orderstatus',           	 \App\Payments\VPay::class . ':orderstatus');
-		
-		$group->post('/mgatepay', 		   	  	 \App\Payments\MGatepay::class . ':mgatepay');
-		
-		$group->post('/easypay', 		      	 \App\Payments\EasyPay::class . ':easypay');
-    })->add(new UserMiddleware());
-
-
-    $app->group('', function (RouteCollectorProxy $group) {
-		$group->get('/login',            	     \App\Http\Controllers\User\LoginController::class . ':login');
-        $group->post('/login',                   \App\Http\Controllers\User\LoginController::class . ':loginHandle');		
-		$group->post('/loginverify',             \App\Http\Controllers\User\LoginController::class . ':loginverify');
-        $group->get('/register',         	     \App\Http\Controllers\User\RegController::class . ':register');
-        $group->post('/register',        	     \App\Http\Controllers\User\RegController::class . ':registerHandle');
-    })->add(new GuestMiddleware());
-	
-    $app->group('/password', function (RouteCollectorProxy $group) {
-        $group->get('/reset',            	     \App\Http\Controllers\User\PasswordController::class . ':reset');
-        $group->post('/reset',           	     \App\Http\Controllers\User\PasswordController::class . ':handleReset');
-		$group->post('/tgsend',           	     \App\Http\Controllers\User\PasswordController::class . ':TGVerify');
-		$group->post('/send',           	     \App\Http\Controllers\User\PasswordController::class . ':mobileVerify');
-		$group->post('/resett',           	     \App\Http\Controllers\User\PasswordController::class . ':mobilereset');
-        $group->get('/token/{token}',    	     \App\Http\Controllers\User\PasswordController::class . ':token');
-        $group->post('/token/{token}',   	     \App\Http\Controllers\User\PasswordController::class . ':handleToken');
-    })->add(new GuestMiddleware());
-
-	$app->group('/auth', function (RouteCollectorProxy $group) {
-		$group->get("/administrator",      	     \App\Http\Controllers\Admin\AdminController::class . ':adminlogin');
-		$group->post("/administrator",           \App\Http\Controllers\Admin\AdminController::class . ':adminloginHandle');
-		$group->post("/recaptcha",      	     \App\Http\Controllers\User\CaptchaController::class . ':recaptcha');
-    })->add(new AdminLoginMiddleware());
-	
-    $app->group('/admin', function (RouteCollectorProxy $group) {
-        $group->get('',                          \App\Http\Controllers\Admin\AdminController::class . ':index');
-        $group->get('/',                         \App\Http\Controllers\Admin\AdminController::class . ':index');
-		$group->get('/analytics',                \App\Http\Controllers\Admin\AdminController::class . ':analytics');
-		$group->get('/license',             	 \App\Http\Controllers\Admin\AdminController::class . ':license');
-		$group->get('/trafficlog',               \App\Http\Controllers\Admin\AdminController::class . ':trafficLog');
-        $group->post('/trafficlog/ajax',         \App\Http\Controllers\Admin\AdminController::class . ':ajax_trafficLog');
-		
-        $group->get('/sys',                      \App\Http\Controllers\Admin\AdminController::class . ':sys');
-        $group->get('/logout',                   \App\Http\Controllers\Admin\AdminController::class . ':logout');
-		$group->post('/query',        			 \App\Http\Controllers\Admin\AdminController::class . ':query');
-		
-		$group->get('/affiliate',              	 \App\Http\Controllers\Admin\AffiliateController::class . ':affiliate')->add(new AppMiddleware());
-		$group->get('/payout',              	 \App\Http\Controllers\Admin\AffiliateController::class . ':payout')->add(new AppMiddleware());
-        $group->post('/affiliate/ajax',          \App\Http\Controllers\Admin\AffiliateController::class . ':ajax_affiliate');
-		$group->post('/payout/ajax',             \App\Http\Controllers\Admin\AffiliateController::class . ':ajax_payout');
-		$group->post('/payouts',                 \App\Http\Controllers\Admin\AffiliateController::class . ':updatePayout');
-
-		$group->post('/revenuequery',            \App\Http\Controllers\Admin\AnalyticsController::class . ':revenuequery');	
-		$group->post('/salesquery',              \App\Http\Controllers\Admin\AnalyticsController::class . ':salesquery');	
-		$group->post('/getGoogleToken',          \App\Services\MailServices\GoogleToken::class . ':getGoogleToken');
-		
-		$group->post('/cartquery',               \App\Http\Controllers\Admin\PackageController::class . ':cartquery');
-		$group->post('/planquery',               \App\Http\Controllers\Admin\OrdersController::class . ':planquery');
-		
-		$group->post('/affiliate',               \App\Http\Controllers\Admin\SetttingsController::class . ':affiliate');	
-		$group->post('/payout',                  \App\Http\Controllers\Admin\SetttingsController::class . ':payoutmode');
-		$group->get('/system',                   \App\Http\Controllers\Admin\SetttingsController::class . ':sysview');
-		$group->post('/sysconfig',               \App\Http\Controllers\Admin\SetttingsController::class . ':sysconfig');				
-		$group->get('/payments',                 \App\Http\Controllers\Admin\SetttingsController::class . ':payview')->add(new AppMiddleware());
-		$group->post('/payments',                \App\Http\Controllers\Admin\SetttingsController::class . ':payments')->add(new AppMiddleware());	
-		$group->get('/notification',             \App\Http\Controllers\Admin\SetttingsController::class . ':notiview')->add(new AppMiddleware());
-		$group->post('/notification',            \App\Http\Controllers\Admin\SetttingsController::class . ':notification')->add(new AppMiddleware());	
-		$group->get('/google',                	 \App\Http\Controllers\Admin\SetttingsController::class . ':googleview')->add(new AppMiddleware());
-		$group->post('/google',               	 \App\Http\Controllers\Admin\SetttingsController::class . ':google')->add(new AppMiddleware());			
-		$group->get('/others',                	 \App\Http\Controllers\Admin\SetttingsController::class . ':othersview');
-		$group->post('/others',               	 \App\Http\Controllers\Admin\SetttingsController::class . ':others');			
-		$group->get('/access',                	 \App\Http\Controllers\Admin\SetttingsController::class . ':accessview')->add(new AppMiddleware());
-		$group->post('/access',               	 \App\Http\Controllers\Admin\SetttingsController::class . ':access')->add(new AppMiddleware());		
-		$group->get('/register',                 \App\Http\Controllers\Admin\SetttingsController::class . ':regview');
-		$group->post('/register',                \App\Http\Controllers\Admin\SetttingsController::class . ':register');
-			
-		
-		$group->post('/upload_logo',             \App\Http\Controllers\Admin\SetttingsController::class . ':upload_logo');
-		$group->post('/remove_logo',             \App\Http\Controllers\Admin\SetttingsController::class . ':remove_logo');
-        $group->post('/config',                  \App\Http\Controllers\Admin\SetttingsController::class . ':config');
-		$group->post('/restriction',             \App\Http\Controllers\Admin\SetttingsController::class . ':restriction');
-		$group->post('/upload',            	   	 \App\Http\Controllers\Admin\SetttingsController::class . ':upload');
-		$group->post('/uploadwx',                \App\Http\Controllers\Admin\SetttingsController::class . ':uploadwx');
-		$group->post('/apikey',            	   	 \App\Http\Controllers\Admin\SetttingsController::class . ':apikey');
-		
-        $group->get('/server',                   \App\Http\Controllers\Admin\ServerController::class . ':index');
-        $group->get('/server/create',            \App\Http\Controllers\Admin\ServerController::class . ':create');
-        $group->post('/server',                  \App\Http\Controllers\Admin\ServerController::class . ':add');
-        $group->get('/server/{id}/edit',         \App\Http\Controllers\Admin\ServerController::class . ':edit');
-        $group->put('/server/{id}',              \App\Http\Controllers\Admin\ServerController::class . ':update');
-        $group->delete('/server',                \App\Http\Controllers\Admin\ServerController::class . ':delete');
-        $group->post('/server/ajax',             \App\Http\Controllers\Admin\ServerController::class . ':ajax');
-		$group->post('/server/status',   		 \App\Http\Controllers\Admin\ServerController::class . ':status');
-		
-		$group->get('/currency',             	 \App\Http\Controllers\Admin\CurrencyController::class . ':index')->add(new AppMiddleware());
-        $group->post('/currency',            	 \App\Http\Controllers\Admin\CurrencyController::class . ':add');
-        $group->get('/currency/{id}/edit',   	 \App\Http\Controllers\Admin\CurrencyController::class . ':edit')->add(new AppMiddleware());
-        $group->put('/currency/{id}',        	 \App\Http\Controllers\Admin\CurrencyController::class . ':update');
-        $group->delete('/currency',          	 \App\Http\Controllers\Admin\CurrencyController::class . ':delete');
-        $group->post('/currency/ajax',       	 \App\Http\Controllers\Admin\CurrencyController::class . ':ajax_currency');
-		$group->post('/currency_update',       	 \App\Http\Controllers\Admin\CurrencyController::class . ':currency_update');
-		$group->post('/currency_settings',       \App\Http\Controllers\Admin\CurrencyController::class . ':currency_settings');
-		$group->post('/currency/status',   		 \App\Http\Controllers\Admin\CurrencyController::class . ':status');
-		
-        $group->get('/package',             	 \App\Http\Controllers\Admin\PackageController::class . ':index')->add(new AppMiddleware());
-        $group->post('/package/ajax',            \App\Http\Controllers\Admin\PackageController::class . ':ajax_package');		
-        $group->get('/package/create',      	 \App\Http\Controllers\Admin\PackageController::class . ':create')->add(new AppMiddleware());
-        $group->post('/package',                 \App\Http\Controllers\Admin\PackageController::class . ':add');
-        $group->get('/package/{id}/edit',        \App\Http\Controllers\Admin\PackageController::class . ':edit')->add(new AppMiddleware());
-        $group->put('/package/{id}',             \App\Http\Controllers\Admin\PackageController::class . ':update');
-        $group->delete('/package',               \App\Http\Controllers\Admin\PackageController::class . ':deleteGet');
-		$group->post('/package/status',   		 \App\Http\Controllers\Admin\PackageController::class . ':status');
-		
-		$group->get('/setup',               	\App\Http\Controllers\Admin\TutorialController::class . ':setup');
-		$group->post('/setup/ajax',   			\App\Http\Controllers\Admin\TutorialController::class . ':ajax_setup');	
-		$group->post('/setup/status',   		\App\Http\Controllers\Admin\TutorialController::class . ':setup_status');
-		$group->get('/setup/create',  			\App\Http\Controllers\Admin\TutorialController::class . ':setup_create');
-		$group->post('/setup',   				\App\Http\Controllers\Admin\TutorialController::class . ':setup_add');
-		$group->get('/setup/{id}/edit', 		\App\Http\Controllers\Admin\TutorialController::class . ':setup_edit');
-		$group->put('/setup/{id}',    			\App\Http\Controllers\Admin\TutorialController::class . ':setup_update');
-		$group->delete('/setup',      			\App\Http\Controllers\Admin\TutorialController::class . ':setup_delete');
-		$group->post('/uploads',            	\App\Http\Controllers\Admin\TutorialController::class . ':upload');
-		
-		$group->get('/faq',               		\App\Http\Controllers\Admin\FaqController::class . ':faq')->add(new AppMiddleware());
-		$group->post('/faq/ajax',   			\App\Http\Controllers\Admin\FaqController::class . ':ajax_faq');	
-		$group->post('/faq/status',   			\App\Http\Controllers\Admin\FaqController::class . ':faq_status');
-		$group->get('/faq/create',  			\App\Http\Controllers\Admin\FaqController::class . ':faq_create')->add(new AppMiddleware());
-		$group->post('/faq',   					\App\Http\Controllers\Admin\FaqController::class . ':faq_add');
-		$group->get('/faq/{id}/edit', 			\App\Http\Controllers\Admin\FaqController::class . ':faq_edit')->add(new AppMiddleware());
-		$group->put('/faq/{id}',    			\App\Http\Controllers\Admin\FaqController::class . ':faq_update');
-		
-		$group->get('/account',               	\App\Http\Controllers\Admin\AccountsController::class . ':account')->add(new AppMiddleware());
-		$group->post('/account/ajax',   		\App\Http\Controllers\Admin\AccountsController::class . ':ajax_account');	
-		$group->post('/account/status',   		\App\Http\Controllers\Admin\AccountsController::class . ':account_status');
-		$group->get('/account/create',  		\App\Http\Controllers\Admin\AccountsController::class . ':account_create')->add(new AppMiddleware());
-		$group->post('/account',   				\App\Http\Controllers\Admin\AccountsController::class . ':account_add');
-		$group->get('/account/{id}/edit', 		\App\Http\Controllers\Admin\AccountsController::class . ':account_edit')->add(new AppMiddleware());
-		$group->put('/account/{id}',    		\App\Http\Controllers\Admin\AccountsController::class . ':account_update');
-		
-		
-		$group->get('/cloudflare',              \App\Http\Controllers\Admin\CloudflareController::class . ':index')->add(new AppMiddleware());
-		$group->post('/cloudflare/ajax',   		\App\Http\Controllers\Admin\CloudflareController::class . ':ajax_zones');	
-		$group->post('/cloudflare/status',   	\App\Http\Controllers\Admin\CloudflareController::class . ':zone_status');
-		$group->get('/cloudflare/create',  		\App\Http\Controllers\Admin\CloudflareController::class . ':add_zone')->add(new AppMiddleware());
-		$group->post('/cloudflare',   			\App\Http\Controllers\Admin\CloudflareController::class . ':create_zone');
-		$group->get('/cloudflare/{id}/edit', 	\App\Http\Controllers\Admin\CloudflareController::class . ':edit_zone')->add(new AppMiddleware());
-		$group->put('/cloudflare/{id}',    		\App\Http\Controllers\Admin\CloudflareController::class . ':update_zone');
-
-        $group->get('/notice',             	 	\App\Http\Controllers\Admin\NoticeController::class . ':index');
-        $group->get('/notice/create',      	 	\App\Http\Controllers\Admin\NoticeController::class . ':create');
-        $group->post('/notice',            	 	\App\Http\Controllers\Admin\NoticeController::class . ':add');
-        $group->get('/notice/{id}/edit',   	 	\App\Http\Controllers\Admin\NoticeController::class . ':edit');
-        $group->put('/notice/{id}',        	 	\App\Http\Controllers\Admin\NoticeController::class . ':update');
-        $group->delete('/notice',          	 	\App\Http\Controllers\Admin\NoticeController::class . ':delete');
-        $group->post('/notice/ajax',       	 	\App\Http\Controllers\Admin\NoticeController::class . ':ajax');
-		
-        $group->get('/login',               	\App\Http\Controllers\Admin\IpController::class . ':index')->add(new AppMiddleware());
-        $group->get('/online',              	\App\Http\Controllers\Admin\IpController::class . ':alive')->add(new AppMiddleware());
-        $group->post('/login/ajax',             \App\Http\Controllers\Admin\IpController::class . ':ajax_login');
-        $group->post('/alive/ajax',             \App\Http\Controllers\Admin\IpController::class . ':ajax_alive');
-		
-        $group->get('/user',                    \App\Http\Controllers\Admin\UserController::class . ':index')->add(new AppMiddleware());
-        $group->get('/user/{id}/edit',          \App\Http\Controllers\Admin\UserController::class . ':edit')->add(new AppMiddleware());
-		$group->get('/contact/{id}',           	\App\Http\Controllers\Admin\UserController::class . ':contact');
-		$group->get('/data',           		    \App\Http\Controllers\Admin\UserController::class . ':getData');
-		$group->post('/data',           		\App\Http\Controllers\Admin\UserController::class . ':addData');
-		$group->post('/addData',           		\App\Http\Controllers\Admin\UserController::class . ':packageList');
-		$group->post('/contact',           		\App\Http\Controllers\Admin\UserController::class . ':send_message');
-		$group->put('/user/{id}',               \App\Http\Controllers\Admin\UserController::class . ':update');
-        $group->delete('/user',                 \App\Http\Controllers\Admin\UserController::class . ':delete');
-        $group->post('/user/changetouser',      \App\Http\Controllers\Admin\UserController::class . ':changetouser');
-        $group->post('/user/ajax',              \App\Http\Controllers\Admin\UserController::class . ':ajax');
-        $group->post('/user/create',            \App\Http\Controllers\Admin\UserController::class . ':createNewUser');
-		$group->post('/userquery',              \App\Http\Controllers\Admin\UserController::class . ':userquery');
-		
-        $group->get('/coupon',                  \App\Http\Controllers\Admin\CouponController::class . ':index')->add(new AppMiddleware());
-        $group->post('/coupon/ajax',            \App\Http\Controllers\Admin\CouponController::class . ':ajax_coupon');
-		$group->get('/coupon/create',  			\App\Http\Controllers\Admin\CouponController::class . ':create')->add(new AppMiddleware());
-		$group->post('/coupon',   				\App\Http\Controllers\Admin\CouponController::class . ':addCoupon');
-		$group->get('/coupon/{id}/edit', 		\App\Http\Controllers\Admin\CouponController::class . ':edit')->add(new AppMiddleware());
-		$group->put('/coupon/{id}',    			\App\Http\Controllers\Admin\CouponController::class . ':editCoupon');
-		
-        $group->get('/subscribe',         		\App\Http\Controllers\Admin\SubscribeController::class . ':index')->add(new AppMiddleware());
-        $group->post('/subscribe/ajax',         \App\Http\Controllers\Admin\SubscribeController::class . ':ajax_subscribe_log');
-
-		$group->get('/orders',           		\App\Http\Controllers\Admin\OrdersController::class . ':order')->add(new AppMiddleware());
-		$group->delete('/order',           	   	\App\Http\Controllers\Admin\OrdersController::class . ':delete');
-		$group->post('/order/ajax',       	   	\App\Http\Controllers\Admin\OrdersController::class . ':ajax_order');
-		$group->get('/order/notify',       	   	\App\Http\Controllers\Admin\OrdersController::class . ':notify');
-		$group->get('/order/delexp',       	   	\App\Http\Controllers\Admin\OrdersController::class . ':delexp');
-		$group->get('/order/delall',       	   	\App\Http\Controllers\Admin\OrdersController::class . ':delall');
-		$group->get('/order/cancel',       	   	\App\Http\Controllers\Admin\OrdersController::class . ':cancel_order');
- 
-        $group->get('/rule',                   	\App\Http\Controllers\Admin\RuleController::class . ':index')->add(new AppMiddleware());
-        $group->get('/rule/create',            	\App\Http\Controllers\Admin\RuleController::class . ':create')->add(new AppMiddleware());
-        $group->post('/rule',                  	\App\Http\Controllers\Admin\RuleController::class . ':add');
-        $group->get('/rule/{id}/edit',         	\App\Http\Controllers\Admin\RuleController::class . ':edit')->add(new AppMiddleware());
-        $group->put('/rule/{id}',              	\App\Http\Controllers\Admin\RuleController::class . ':update');
-        $group->delete('/rule',                	\App\Http\Controllers\Admin\RuleController::class . ':delete');
-        $group->get('/rule/log',               	\App\Http\Controllers\Admin\RuleController::class . ':log');
-        $group->post('/rule/ajax',             	\App\Http\Controllers\Admin\RuleController::class . ':ajax_rule');
-        $group->post('/rule/log/ajax',         	\App\Http\Controllers\Admin\RuleController::class . ':ajax_log');
-    })->add(new AdminMiddleware());	
-	
-
-    $app->group('/api', function (RouteCollectorProxy $group) { 
-        $group->get('/users',                	\App\Http\Controllers\Api\UserApiController::class . ':userList'); 
-        $group->post('/users/traffic',       	\App\Http\Controllers\Api\TrafficController::class . ':addTraffic');
-        $group->post('/users/aliveip',       	\App\Http\Controllers\Api\AliveIpController::class . ':addAliveIp');
-		$group->post('/server/{id}/info',     	\App\Http\Controllers\Api\ServerStatusController::class . ':server_status');		
-		$group->get('/server/{id}/info',      	\App\Http\Controllers\Api\ServerController::class . ':server_info');
-		$group->get('/rules/detect_rules',    	\App\Http\Controllers\Api\DetectController::class . ':detectRules');
-		$group->post('/users/detectlog',     	\App\Http\Controllers\Api\DetectController::class . ':detectLogs');
-		$group->get('/server/relay/{id}/info',  \App\Http\Controllers\Api\RelayController::class . ':relay_info');
-		
-	})->add(new WebapiMiddleware());
-	
-    $app->group('/link', function (RouteCollectorProxy $group) {
-        $group->get('/{token}',          	    \App\Http\Controllers\User\LinkController::class . ':GetContent');
-    });
-};
+<?php //004fb
+if(!extension_loaded('ionCube Loader')){$__oc=strtolower(substr(php_uname(),0,3));$__ln='ioncube_loader_'.$__oc.'_'.substr(phpversion(),0,3).(($__oc=='win')?'.dll':'.so');if(function_exists('dl')){@dl($__ln);}if(function_exists('_il_exec')){return _il_exec();}$__ln='/ioncube/'.$__ln;$__oid=$__id=realpath(ini_get('extension_dir'));$__here=dirname(__FILE__);if(strlen($__id)>1&&$__id[1]==':'){$__id=str_replace('\\','/',substr($__id,2));$__here=str_replace('\\','/',substr($__here,2));}$__rd=str_repeat('/..',substr_count($__id,'/')).$__here.'/';$__i=strlen($__rd);while($__i--){if($__rd[$__i]=='/'){$__lp=substr($__rd,0,$__i).$__ln;if(file_exists($__oid.$__lp)){$__ln=$__lp;break;}}}if(function_exists('dl')){@dl($__ln);}}else{die('The file '.__FILE__." is corrupted.\n");}if(function_exists('_il_exec')){return _il_exec();}echo("Site error: the ".(php_sapi_name()=='cli'?'ionCube':'<a href="http://www.ioncube.com">ionCube</a>')." PHP Loader needs to be installed. This is a widely used PHP extension for running ionCube protected PHP code, website security and malware blocking.\n\nPlease visit ".(php_sapi_name()=='cli'?'get-loader.ioncube.com':'<a href="http://get-loader.ioncube.com">get-loader.ioncube.com</a>')." for install assistance.\n\n");exit(199);
+?>
+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
+Yh2NWeXUGdZ8bVrci2HUBr8ZO2I1kfwdxzWPhG==
