@@ -1,59 +1,29 @@
-<?php //004fb
-if(!extension_loaded('ionCube Loader')){$__oc=strtolower(substr(php_uname(),0,3));$__ln='ioncube_loader_'.$__oc.'_'.substr(phpversion(),0,3).(($__oc=='win')?'.dll':'.so');if(function_exists('dl')){@dl($__ln);}if(function_exists('_il_exec')){return _il_exec();}$__ln='/ioncube/'.$__ln;$__oid=$__id=realpath(ini_get('extension_dir'));$__here=dirname(__FILE__);if(strlen($__id)>1&&$__id[1]==':'){$__id=str_replace('\\','/',substr($__id,2));$__here=str_replace('\\','/',substr($__here,2));}$__rd=str_repeat('/..',substr_count($__id,'/')).$__here.'/';$__i=strlen($__rd);while($__i--){if($__rd[$__i]=='/'){$__lp=substr($__rd,0,$__i).$__ln;if(file_exists($__oid.$__lp)){$__ln=$__lp;break;}}}if(function_exists('dl')){@dl($__ln);}}else{die('The file '.__FILE__." is corrupted.\n");}if(function_exists('_il_exec')){return _il_exec();}echo("Site error: the ".(php_sapi_name()=='cli'?'ionCube':'<a href="http://www.ioncube.com">ionCube</a>')." PHP Loader needs to be installed. This is a widely used PHP extension for running ionCube protected PHP code, website security and malware blocking.\n\nPlease visit ".(php_sapi_name()=='cli'?'get-loader.ioncube.com':'<a href="http://get-loader.ioncube.com">get-loader.ioncube.com</a>')." for install assistance.\n\n");exit(199);
-?>
-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
-IIyEzRa9biNge3AJy96elpg/+sC=
+<?php
+$XManager['debug'] 			 = false;
+$XManager['timeZone'] 	  	 = "Asia/Shanghai";   ## https://www.php.net/manual/en/timezones.php
+$XManager['default_lang'] 	 = "zh-cn"; #默认语言 en , zh-cn
+$XManager['admin_path']      = "/administrator"; #管理员登录路径
+
+// db_host|db_socket 二选一，若设置 db_socket 则 db_host 会被忽略，不用请留空。若数据库在本机上推荐用 db_socket。
+// db_host 例: localhost（可解析的主机名）, 127.0.0.1（IP 地址）, 10.0.0.2:4406（含端口)
+// db_socket 例：/var/run/mysqld/mysqld.sock（需使用绝对地址）
+
+$XManager['db_driver']    	 = 'mysql';   
+$XManager['db_host']      	 = 'localhost';
+$XManager['db_socket']    	 = '';
+$XManager['db_database']  	 = 'manager';           
+$XManager['db_username']  	 = 'root';             
+$XManager['db_password']  	 = '';           
+$XManager['db_charset']   	 = 'utf8mb4';
+$XManager['db_collation'] 	 = 'utf8mb4_unicode_ci'; 
+$XManager['db_prefix']    	 = '';  
+
+$XManager['cdn_forwarded_ip'] = array('HTTP_X_FORWARDED_FOR', 'HTTP_ALI_CDN_REAL_IP', 'X-Real-IP', 'True-Client-Ip');
+foreach ($XManager['cdn_forwarded_ip'] as $cdn_forwarded_ip) {
+    if (isset($_SERVER[$cdn_forwarded_ip])) {
+        $list = explode(',', $_SERVER[$cdn_forwarded_ip]); 
+        $_SERVER['REMOTE_ADDR'] = $list[0];
+        break;
+    }
+}
+ 
