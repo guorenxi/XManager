@@ -1,434 +1,641 @@
-!odMbo!
-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
+<script>
+window.addEventListener('load', () => { 
+	$(".duration li a").first().addClass("active");
+	$(".paym:first-child").addClass("active");
+	$(".paym li a").first().addClass("active");	
+}); 
+</script>
+{include file='user/header.tpl'}
+{$custom = json_decode($package->custom)}
+{$monthly = json_decode($package->monthly)}
+{$quaterly = json_decode($package->quaterly)}
+{$semiannually = json_decode($package->semiannually)}
+{$annually = json_decode($package->annually)}
+<script src="/assets/js/core/mobile-detect.min.js"></script>
+<div class="content-header row">
+   <div class="content-header-left col-md-9 col-12 mb-2">
+      <div class="row breadcrumbs-top">
+         <div class="col-12">
+            <h2 class="content-header-title float-left mb-0">{$lang->get('Checkout')}</h2>
+            <div class="breadcrumb-wrapper">
+               <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/portal/clientarea">{$lang->get('home')}</a>
+                  </li>
+                  <li class="breadcrumb-item active"><a href="/portal/renew?orderid={$orderid}">{$lang->get('Checkout')}</a>
+                  </li>
+               </ol>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="content-body">
+<div class="row">
+<div class="col-12 col-md-7 col-lg-8">
+<div class="row">
+	{if $package->note != ""}
+	<div class="col-12 col-md-12 col-lg-12">
+	<div class="card">
+	<div class="card-body justify-content-center">
+		<h4><b>{$lang->get('bnote')}</b></h4>
+		<hr>
+		{$package->note}
+	</div>
+	</div>
+	</div>
+	{/if}
+	
+	<div class="col-12 col-md-12 col-lg-12">
+	<div class="card">
+	<div class="card-body justify-content-center">
+		<h4><b>{if $lang_cookie == "en"}{$package->name}{else}{$package->cn_name}{/if} </b></h4>
+		<hr>
+		<br>
+		<h6><b>{$lang->get('Data')} : </b> {if $package->bandwidth >= 10000}{$lang->get('Unlimited')}{else}{$package->bandwidth} GB{/if} </h6>
+		<h6><b>{$lang->get('devices')} : </b> {if $package->connector == '0' } {$lang->get('Unlimited')}{else}{$package->connector}{/if}</h6>
+		<h6><b>{$lang->get('userlevel')} : </b> {if $package->level <= 0}{$lang->get('userfree')}{else}Lv {$package->level}{/if}</h6>
+		<h6><b>{$lang->get('Speed')} : </b> {if $package->speedlimit == '0' }1 Gbps{else}{$package->speedlimit} Mbps{/if}</h6>
+		<h6><b>{$lang->get('Reset')} : </b>{$lang->get('None')}</h6>
+		<h6><b>{$lang->get('OrderType')} : </b> {$lang->get('DataPackage')} </h6>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-12 col-md-12 col-lg-12">
+	<div class="card">
+	<div class="card-body justify-content-center">
+		<h4><b>{$lang->get('BillingCycle')}</b></h4>
+		<hr>
+		<br>
+		<div class="clo-lg-12 col-md-12 mb-2">
+		   <div class="form-group row">
+			  <label for="" class="col-sm-2 col-form-label"></label>
+			  <div class="col-sm-10 duration" >
+				 <ul class="nav nav-pills justify-content-center" id="duration">
+					{if $package->type == 2}
+						{if $custom->status == 1 && $custom->price != ""}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1" data-toggle="pill" onClick="SwitchBilling('{$custom->expire}@{number_format($custom->price,2)}')" style="font-size:12px;width:140px" value="{$custom->expire}@{number_format($custom->price,2)}"><center><i class="fad fa-shopping-cart" style="font-size:20px"></i></br></br>{$custom->expire} {$lang->get('Days')}</center></a>
+						</li> 
+						{/if}
+						
+						{if $monthly->status == 1 && $monthly->price != ""}
+						<li class="nav-item mr-1">
+							<a class="nav-link  text-center mb-1" data-toggle="pill" onClick="SwitchBilling('{$monthly->expire}@{number_format($monthly->price,2)}')" style="font-size:12px;width:140px" value="{$monthly->expire}@{number_format($monthly->price,2)}"><center><i class="fad fa-shopping-cart" style="font-size:20px"></i></br></br>{$lang->get('PMonthly')}</center></a>
+						</li> 
+						{/if}
+						
+						{if $quaterly->status == 1 && $quaterly->price != ""}
+						<li class="nav-item mr-1">
+							<a class="nav-link  text-center mb-1" data-toggle="pill" onClick="SwitchBilling('{$quaterly->expire}@{number_format($quaterly->price,2)}')" style="font-size:12px;width:140px" value="{$quaterly->expire}@{number_format($quaterly->price,2)}"><center><i class="fad fa-shopping-cart" style="font-size:20px"></i></br></br>{$lang->get('PQuaterly')}</center></a>
+						</li>
+						{/if}
+						
+						{if $semiannually->status == 1 && $semiannually->price != ""}
+						<li class="nav-item mr-1">
+							<a class="nav-link  text-center mb-1" data-toggle="pill" onClick="SwitchBilling('{$semiannually->expire}@{number_format($semiannually->price,2)}')" style="font-size:12px;width:140px" value="{$semiannually->expire}@{number_format($semiannually->price,2)}"><center><i class="fad fa-shopping-cart" style="font-size:20px"></i></br></br>{$lang->get('PSemi')}</center></a>
+						</li>
+						{/if}
+						
+						{if $annually->status == 1 && $annually->price != ""}
+						<li class="nav-item mr-1">
+							<a class="nav-link  text-center mb-1" data-toggle="pill" onClick="SwitchBilling('{$annually->expire}@{number_format($annually->price,2)}')" style="font-size:12px;width:140px" value="{$annually->expire}@{number_format($annually->price,2)}"><center><i class="fad fa-shopping-cart" style="font-size:20px"></i></br></br>{$lang->get('PAnnually')}</center></a>
+						</li>
+						{/if}
+					{else}
+						{if $package->status == 1 }
+						<option value="1@{number_format($package->topup_price,2)}" > {$lang->get('topup')} - {if $package->bandwidth >= 10000}{$lang->get('Unlimited')}{else}{$package->bandwidth} GB{/if}</option>
+						{/if}
+					{/if}
+					
+				 </ul>
+				 
+			  </div>
+		   </div>
+		</div>
+		
+		<div class="clo-lg-12 col-md-12">
+		   <div class="form-group row">
+			  <label for="" class="col-sm-2 col-form-label">{$lang->get('PaymentMethod')}</label>
+			  <div class="col-sm-10 paym">
+				   <ul class="nav nav-pills justify-content-center" id="paym">
+						{if $Config['pay_bal'] == 1 }
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1" data-toggle="pill"  style="font-size:12px;width:140px" onClick="paySwitch('11')" value="11"><center><span class="currency currency-money" style="font-size:20px"></span> </br></br> {$lang->get('balance')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_vpay'] == 1 && $Config['enable_vpay_alipay'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1 " data-toggle="pill"  style="font-size:12px;width:140px" onClick="paySwitch('1')" value="1"><center><span class="currency currency-alipay" style="font-size:20px"></span> </br></br> {$lang->get('alipay')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_vpay'] == 1 && $Config['enable_vpay_wechat'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"   data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('2')" value="2"><center><span class="currency currency-wechat-pay" style="font-size:20px"></span></br></br>{$lang->get('Wechat')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_stripe'] == 1 && $Config['enable_stripe_alipay'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('4')" value="4"><center><span class="currency currency-alipay" style="font-size:20px"></span></br></br> {$lang->get('alipay')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_stripe'] == 1 && $Config['enable_stripe_wechat'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('3')" value="3"><center><span class="currency currency-wechat-pay" style="font-size:20px"></span> </br></br> {$lang->get('Wechat')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_stripe'] == 1 && $Config['enable_stripe_card'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('16')" value="16"><center><span class="currency currency-bank-card" style="font-size:20px"></span> </br></br> {$lang->get('credit_card')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_theadpay'] == 1 }
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill"  style="font-size:12px;width:140px" onClick="paySwitch('8')" value="8"><center><span class="currency currency-alipay" style="font-size:20px"></span> </br></br> {$lang->get('alipay')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_mgate'] == 1 }
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill"  style="font-size:12px;width:140px" onClick="paySwitch('10')" value="10"><center><span class="currency currency-alipay" style="font-size:20px"></span></br></br> {$lang->get('alipay')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_easypay'] == 1 && $Config['enable_easypay_alipay'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('9')" value="9"><center><span class="currency currency-alipay" style="font-size:20px"></span></br></br> {$lang->get('alipay')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_easypay'] == 1 && $Config['enable_easypay_wechat'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('12')" value="12"><center><span class="currency currency-wechat-pay" style="font-size:20px"></span> </br></br> {$lang->get('Wechat')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_f2fpay'] == 1 }
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1" data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('7')" value="7"><center><span class="currency currency-alipay" style="font-size:20px"></span> </br></br> {$lang->get('alipay')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_paypal'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1" data-toggle="pill" style="font-size:12px;width:140px" {if $Config['paypal_type'] == 1}onClick="paySwitch('5')"{else}onClick="paySwitch('13')"{/if} value="5"><center><span class="currency currency-paypal" style="font-size:20px"></span> </br></br> Paypal</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_coinpayments'] == 1 }
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1" data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('6')" value="6"><center>{if $Config['cp_currency'] == "BTC"}<span class="currency currency-bitcoin" style="font-size:20px"></span></br></br> BTC ({$lang->get('crytos')}){else}<span class="currency currency-usdt" style="font-size:20px"></span></br></br> USDT ({$lang->get('crytos')}){/if}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_token188'] == 1 }
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1" data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('14')" value="14"><center><span class="currency currency-usdt" style="font-size:20px"></span></br></br> USDT ({$lang->get('crytos')})</center></a>
+						</li> 
+						{/if}
+						
+						{if $Config['enable_paymentwall'] == 1 && $Config['paymentwall_alipay'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('17')" value="17"><center><span class="currency currency-alipay" style="font-size:20px"></span></br></br> {$lang->get('alipay')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_paymentwall'] == 1 && $Config['paymentwall_wechat'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('18')" value="18"><center><span class="currency currency-wechat-pay" style="font-size:20px"></span> </br></br> {$lang->get('Wechat')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_paymentwall'] == 1 && $Config['paymentwall_card'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('19')" value="19"><center><span class="currency currency-bank-card" style="font-size:20px"></span> </br></br> {$lang->get('credit_card')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_paymentwall'] == 1 && $Config['paymentwall_unionpay'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('20')" value="20"><center><span class="currency currency-unionpay-3" style="font-size:20px"></span> </br></br> {$lang->get('unionpay')}</center></a>
+						</li> 
+						{/if}
+						
+						{if $Config['enable_rave'] == 1 && $Config['rave_card'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('21')" value="21"><center><span class="currency currency-bank-card" style="font-size:20px"></span> </br></br> {$lang->get('credit_card')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_rave'] == 1 && $Config['rave_mobile_money'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('22')" value="22"><center><span class="currency currency-bank-card" style="font-size:20px"></span> </br></br> {$lang->get('mobile_money')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_paystack'] == 1 && $Config['paystack_card'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('23')" value="23"><center><span class="currency currency-bank-card" style="font-size:20px"></span> </br></br> {$lang->get('credit_card')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_paystack'] == 1 && $Config['paystack_mobile_money'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('24')" value="24"><center><span class="currency currency-bank-card" style="font-size:20px"></span> </br></br> {$lang->get('mobile_money')}</center></a>
+						</li> 
+						{/if}
+						{if $Config['enable_binancepay'] == 1}
+						<li class="nav-item mr-1">
+							<a class="nav-link text-center mb-1"  data-toggle="pill" style="font-size:12px;width:140px" onClick="paySwitch('25')" value="25"><center><span class="currency currency-usdt" style="font-size:20px"></span></br></br> BinancePay</center></a>
+						</li> 
+						{/if}
+					</ul>
+			  </div>
+		   </div>
+		</div>
+	</div>
+	</div>
+	</div>	
+</div>	
+</div>
+
+
+<div class="col-12 col-md-5 col-lg-4">
+<div class="card ">
+<div class="card-body justify-content-center">
+
+		<h4><b>{$lang->get('ProductSummary')}</b></h4>
+		<hr>
+		<br>
+		<div class="checkout-options">
+		   <div class="price-details">
+			  <ul class="list-unstyled ">
+				 <li class="price-detail">
+					<div class="detail-title"><b>{$lang->get('SubTotal')}</b></div>
+					<div class="detail-amt" id="sub-total">
+					   {$Config['default_currency_symbol']} {$price}
+					</div>
+				 </li>
+				 <li class="price-detail mt-1">
+					<div class="detail-title"><b>{$lang->get('discount')}</b></div>
+					<div class="detail-amt discount-amt" id="credit">
+						{$Config['default_currency_symbol']} 0.00
+					</div>
+				 </li>
+				 <hr />
+				 <div class="input-group text-right">
+                    <input type="text" id="coupon" class="form-control" placeholder="{$lang->get('DiscountCode')}" aria-describedby="button-addon2"/>
+                    <div class="input-group-append">
+                        <button class="btn btn-relief-primary discount" style="background-color:{$Config['app_color']};color:white" type="button" id="coupon_input"><i class="fad fa-tags"></i> {$lang->get('RedeemC')}</button>
+                    </div>
+                 </div>
+				 <input type="text" id="camt" value="0.00" hidden class="form-control">
+				 <input type="text" id="renew" value="1" hidden class="form-control">
+				 <hr>
+				 <li class="price-detail mt-1">
+					<div class="detail-title"><h4><b>{$lang->get('TotalAmount')}</b></h4></div>
+					<div class="detail-amt discount-amt" id="total">
+						<h4><b>{$Config['default_currency_symbol']} {$price}</b></h4>
+					</div>
+				 </li>
+			  </ul>
+		   </div>
+		</div>	
+		<div class="col-12 col-md-12 col-lg-12 text-center mb-50 mt-3">
+            <button class="btn btn-block btn-relief-primary" style="background-color:{$Config['app_color']};color:white" type="button" id="pay" > <b>{$lang->get('PayNow')}</b></button>
+			<div id="paypal-button" style="width: 100%;" hidden></div>
+		</div>		
+</div>
+</div>	
+</div>
+</div>
+
+<div class="modal fade" id="theadpaymod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-xs" role="document">
+      <div class="modal-content" >
+         <div class="modal-header" style="background-color:{$Config['app_color']}">
+            <h6 class="modal-title" style="width:100%">
+               <div>
+                  <span class="alignright"  style="font-size:15px;color:#ffffff">{$lang->get('wait')}</span>
+               </div>
+            </h6>
+            <button type="button" class="close"  id="deltheadpay" >x</button>
+         </div>
+         <div class="modal-body">
+            <center>
+               <div id="theadpayqrcode" style="position: relative;display: inline-block;" ></div>
+               <b><span id="theadpaymobile" style="font-size:15px;color:black" hidden></span></br> <span  id="amountt" style="font-size:15px;color:red"></span></b>
+            </center>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade" id="payment2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-xs" role="document">
+      <div class="modal-content" >
+         <div class="modal-header" style="background-color:{$Config['app_color']}">
+            <h6 class="modal-title" style="width:100%">
+               <div>
+                  <span class="alignleft"  id="down" style="font-size:15px;color:#ffffff"></span>
+                  <span class="alignright"  style="font-size:15px;color:#ffffff">{$lang->get('wait')}</span>
+               </div>
+            </h6>
+            <button type="button" class="close"  id="delorders" >x</button>
+         </div>
+         <div class="modal-body">
+            <center>
+               <input class="form-control " id="exp" hidden>
+               <div id="qrcode" style="position: relative;display: inline-block;" ></div>
+               <b><span id="address" style="font-size:10px;color:black"></span></br> <span  id="amount" style="font-size:15px;color:red"></span></b>
+            </center>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-xs" role="document">
+      <div class="modal-content" >
+         <div class="modal-header" style="background-color:{$Config['app_color']};color:#ffffff">
+            <h6 class="modal-title" style="width:100%">
+               <div>
+                  <span class="alignleft" id="timeout" style="margin-top:-3px;font-size:15px;color:#ffffff"></span>
+                  <span class="alignright"  style="font-size:15px;color:#ffffff">{$lang->get('wait')}</span>
+               </div>
+            </h6>
+            <button type="button" class="close" id="delorder" >x</button>
+         </div>
+         <div class="modal-body">
+            <center>
+               <div id="qrcode1" style="position: relative;display: inline-block;" ></div></br>
+               <b><span id="mobile" style="font-size:15px;color:black"></span></br> <span id="pay_amount" style="font-size:15px;color:red"></span></b>
+            </center>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade" id="f2fpay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+   <div class="modal-dialog modal-dialog-centered modal-xs" role="document">
+      <div class="modal-content" >
+         <div class="modal-header" style="background-color:{$Config['app_color']};color:#ffffff">
+            <h6 class="modal-title" style="width:100%">
+               <div>
+                  <span class="alignright"  style="font-size:15px;color:#ffffff">{$lang->get('wait')}</span>
+               </div>
+            </h6>
+            <button type="button" class="close" id="delf2f" >x</button>
+         </div>
+         <div class="modal-body">
+            <center>
+               <div id="f2fqrcode" style="position: relative;display: inline-block;" ></div></br>
+               <b><span id="f2fmobile" style="font-size:15px;color:black" hidden></span></br> <span id="f2famount" style="font-size:15px;color:red"></span></b>
+            </center>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade" id="stripepay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+   <div class="modal-dialog modal-dialog-centered modal-xs" role="document">
+      <div class="modal-content" >
+         <div class="modal-header" style="background-color:{$Config['app_color']};color:#ffffff">
+            <h6 class="modal-title" style="width:100%">
+               <div>
+                  <span class="alignright"  style="font-size:15px;color:#ffffff">{$lang->get('wait')}</span>
+               </div>
+            </h6>
+            <button type="button" class="close" id="stripedel" >x</button>
+         </div>
+         <div class="modal-body">
+            <center>
+               <div id="stripeqrcode" style="position: relative;display: inline-block;" ></div></br>
+               <b></br> <span id="stripeamount" style="font-size:15px;color:red"></span></b>
+            </center>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal fade" id="binancepay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-xs" role="document">
+      <div class="modal-content" >
+         <div class="modal-header" style="background-color:{$Config['app_color']};color:#ffffff">
+            <h6 class="modal-title" style="width:100%">
+               <div>
+                  <span class="alignright"  style="font-size:15px;color:#ffffff">{$lang->get('wait')}</span>
+               </div>
+            </h6>
+            <button type="button" class="close" id="del_borders" >x</button>
+         </div>
+         <div class="modal-body">
+            <center>
+			   <b><span id="bamount" style="font-size:15px;color:red"></span></b></br>
+               <div id="bqrcode" style="position: relative;display: inline-block;" ></div></br>
+               <b>
+			   <span id="bmobile" style="font-size:15px;color:black"></span></br>
+			   </b>
+            </center>
+         </div>
+      </div>
+   </div>
+</div>
+{include file='user/footer.tpl'}
+<script>
+layui.use('layer', function(){});
+
+window.addEventListener('load', () => { 
+	var val = $("#paym").find(".active");
+    var paymentmethod = val.attr('value');
+   	if (paymentmethod == 5){
+   		document.getElementById("paypal-button").hidden = false;
+   		document.getElementById("pay").hidden = true;
+   	}else{
+		document.getElementById("paypal-button").hidden = true;
+   		document.getElementById("pay").hidden = false;	
+   	}
+})	
+
+
+function paySwitch(val){
+   	if (val == 5){
+   		document.getElementById("paypal-button").hidden = false;
+   		document.getElementById("pay").hidden = true;
+   	}else{
+		document.getElementById("paypal-button").hidden = true;
+   		document.getElementById("pay").hidden = false;	
+   	}	
+}
+
+function SwitchBilling(val){
+    let discount = $("#camt").val();
+	let price = val.split("@")[1];
+	let p = price.replace(/,/g, "");
+	let cost = Number(p) - Number(discount);
+	document.getElementById('sub-total').innerHTML = "{$Config['default_currency_symbol']} " + price;
+	document.getElementById('total').innerHTML = "<h4><b>{$Config['default_currency_symbol']} " + cost.toFixed(2) + "</b></h4>";
+}
+
+$(document).ready(function () {
+   $("#coupon_input").click(function () {
+      var coup = $("#coupon").val();
+	  var val = $("#duration").find(".active");
+      var duration = val.attr('value');
+	  var p = duration.split('@')[1];
+	  let price = p.replace(/,/g, "");
+      if (coup == "" || coup == null) {
+		Swal.fire({
+			title: '',
+			text: panel.CouponReq,
+			icon: 'error',
+			showCancelButton: false,
+			showConfirmButton:true,
+			confirmButtonText: "{$lang->get('ok')}",
+			allowOutsideClick: false,
+			width: '400px',
+			height: '250px',
+			padding: '1em',
+			customClass: {
+				confirmButton: 'btn btncolor ms-1 ',
+				cancelButton: 'btn btn-dark ms-1'
+			},
+			buttonsStyling: false
+		});
+        return;
+      }
+      $.ajax({
+         type: "POST",
+         url: "/portal/coupon_check",
+         dataType: "json",
+         data: {
+            package: {$package->id},
+            coupon: $("#coupon").val(),
+			price,
+         },
+         success: (data) => {
+            if (data.ret) {
+			   document.getElementById('camt').value = data.credit;
+               document.getElementById('credit').innerHTML = "{$Config['default_currency_symbol']} " + data.credit;
+               document.getElementById('total').innerHTML = "<h4><b>{$Config['default_currency_symbol']} " + data.total + "</b></h4>";
+               document.getElementById("coupon").disabled = true;
+               document.getElementById("coupon_input").disabled = true;
+				Swal.fire({
+					title: '',
+					text: data.msg,
+					icon: 'success',
+					showCancelButton: false,
+					showConfirmButton:true,
+					confirmButtonText: "{$lang->get('ok')}",
+					allowOutsideClick: false,
+					width: '400px',
+					height: '250px',
+					padding: '1em',
+					customClass: {
+						confirmButton: 'btn btncolor ms-1 ',
+						cancelButton: 'btn btn-dark ms-1'
+					},
+					buttonsStyling: false
+				});
+            } else {
+				Swal.fire({
+					title: '',
+					text: data.msg,
+					icon: 'error',
+					showCancelButton: false,
+					showConfirmButton:true,
+					confirmButtonText: "{$lang->get('ok')}",
+					allowOutsideClick: false,
+					width: '400px',
+					height: '250px',
+					padding: '1em',
+					customClass: {
+						confirmButton: 'btn btncolor ms-1 ',
+						cancelButton: 'btn btn-dark ms-1'
+					},
+					buttonsStyling: false
+				});
+            }
+         },
+         error: (jqXHR) => {
+			Swal.fire({
+				title: '',
+				text: panel.error,
+				icon: 'error',
+				showCancelButton: false,
+				showConfirmButton:true,
+				confirmButtonText: "{$lang->get('ok')}",
+				allowOutsideClick: false,
+				width: '400px',
+				height: '250px',
+				padding: '1em',
+				customClass: {
+					confirmButton: 'btn btncolor ms-1 ',
+					cancelButton: 'btn btn-dark ms-1'
+				},
+				buttonsStyling: false
+			});
+         }
+      })
+   });
+});
+</script>
+{if $Config['paypal_type'] == 1}
+	{include file='include/paymethod/paypal.tpl'}
+{else}	
+	{include file='include/paymethod/paypalex.tpl'}
+{/if}
+{include file='include/paymethod/balance.tpl'}
+{include file='include/paymethod/vpay.tpl'}
+{include file='include/paymethod/coinpayments.tpl'}
+{include file='include/paymethod/f2fpay.tpl'}
+{include file='include/paymethod/stripe.tpl'}
+{include file='include/paymethod/mgate.tpl'}
+{include file='include/paymethod/easypay.tpl'}
+{include file='include/paymethod/theadpay.tpl'}
+{include file='include/paymethod/token188.tpl'}
+{include file='include/paymethod/paymentwall.tpl'}
+{include file='include/paymethod/rave.tpl'}
+{include file='include/paymethod/paystack.tpl'}
+{include file='include/paymethod/binancepay.tpl'}
+<script>
+	document.getElementById('pay').addEventListener('click', () => {
+		var val = $("#paym").find(".active");
+        var paymethod = val.attr('value');
+		
+		if (paymethod == 1 || paymethod == 2){
+			vpay(paymethod);
+		}else if(paymethod == 3){
+			Stripe();
+		}else if(paymethod == 4 || paymethod == 16){
+			StripePay(paymethod);
+		}else if(paymethod == 6 ){
+			Coinpayments();
+		}else if(paymethod == 7){
+			f2fcreate();
+		}else if(paymethod == 8 ){
+			theadpay();
+		}else if(paymethod == 9 || paymethod == 12){
+			easypay(paymethod);
+		}else if(paymethod == 10 ){
+			mgate();
+		}else if(paymethod == 11 ){
+			balance();
+		}else if(paymethod == 5 ){
+			paypal();
+		}else if(paymethod == 14 ){
+			Token188();
+		}else if(paymethod == 17){
+		    var type = "alipay";
+			paymentwall(type);
+		}else if(paymethod == 18){
+			var type = "wechatpayments";
+			paymentwall(type);
+		}else if(paymethod == 19){
+			var type = "cc";
+			paymentwall(type);
+		}else if(paymethod == 20){
+			var type = "unionpay";
+			paymentwall(type);
+		}else if(paymethod == 21){
+			var type = "card";
+			rave(type);
+		}else if(paymethod == 22){
+			var type = "mobilemoney";
+			rave(type);
+		}else if(paymethod == 23){
+			var type = "card";
+			paystack(type);
+		}else if(paymethod == 24){
+			var type = "mobile_money";
+			paystack(type);
+		}else if(paymethod == 25){
+			BinancePay();
+		}     
+	});
+</script>	
